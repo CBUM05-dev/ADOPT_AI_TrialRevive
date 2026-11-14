@@ -1,0 +1,10 @@
+.venv/
+.env
+__pycache__/
+*.pyc
+data/trials.db
+.pytest_cache/
+
+# Documents confidentiels de l'équipe (accord + conception) : ne jamais publier
+*.docx
+*.pdf
