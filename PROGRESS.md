@@ -64,3 +64,9 @@ Statuts : ⬜ à faire · 🟨 en cours · ✅ fini et vérifié · ❌ bloqué 
 - À FAIRE HUMAIN : valider les scores des tolérances (valeurs de travail) dans src/tolerances.py ; vérifier src/reanalyses.py.
 - NON FAIT (hors prototype) : veille automatique de la littérature (modes push), horloge commune des dates, normalisation par vocabulaires médicaux, index interne/externe séparés.
 - ⚠ data/internal_trial.csv a été régénéré (nouvelles colonnes) : refaire un `git add . && git commit`.
+
+- ✅ Interface thème labo pharma : app_ui.py (+ .streamlit/config.toml). Lancer : python -m streamlit run app_ui.py. app.py reste la version simple de secours. Vérifiée visuellement dans Chrome (verdict, cartes, entonnoir animé, écartés, comparaison).
+
+- ✅ Pilule 3D (three.js, hors ligne) : src/pill3d.py + static/three.min.js (MIT). Intégrée dans le bandeau de app_ui.py. Vérifiée dans Chrome.
+
+- ✅ Interface refaite en tableau de bord : barre latérale, icônes SVG (plus d'emojis, test automatique), pilule 3D conservée. app_ui.py. 32 tests.
