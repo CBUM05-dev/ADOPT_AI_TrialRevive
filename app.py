@@ -64,11 +64,18 @@ if res:
     tabs = st.tabs(["Essais retenus", "Essais écartés", "Patients (fictifs)", "Dossier final", "Comparaison IA"])
 
     with tabs[0]:
+        v = d["verdict"]
+        m1, m2, m3 = st.columns(3)
+        m1.metric("R : comment obtenir la réponse", v["R"], v["R_texte"][:45], delta_color="off")
+        m2.metric("E : force de la preuve (atteignable)", v["E"], v["E_texte"], delta_color="off")
+        m3.metric("G : gains possibles", len(v["G"]), ", ".join(g["code"] for g in v["G"]), delta_color="off")
         st.subheader(f"{len(d['retenus'])} essais peuvent répondre à la question")
         st.dataframe(
             pd.DataFrame(
                 [{"NCT": r["nct_id"], "Essai": r["titre"], "Patients": r["nb_patients"],
-                  "Type de preuve": "médicament direct" if r["niveau"] == "direct" else "même classe",
+                  "Médicament": "exact" if r["niveau"] == "direct" else "même classe",
+                  "Preuve": r["E"], "Score": r["score"],
+                  "Écarts tolérés": " ; ".join(r["ecarts"]) or "aucun",
                   "Lien": r["lien"]} for r in d["retenus"]]
             ),
             hide_index=True, use_container_width=True,
@@ -87,8 +94,11 @@ if res:
         )
 
     with tabs[2]:
-        st.subheader(f"{d['utilisables']} patients utilisables sur {d['entonnoir'][0]['n']} (données FICTIVES)")
-        funnel = pd.DataFrame(d["entonnoir"]).set_index("etape")
+        if d["utilisables"] is None:
+            st.subheader("Comptage INDÉTERMINÉ : le lien entre les données n'est pas validé")
+        else:
+            st.subheader(f"{d['utilisables']} patients complets sur {d['entonnoir'][0]['n']} (données FICTIVES)")
+        funnel = pd.DataFrame(d["entonnoir"]).set_index("etape")[["n"]]
         st.bar_chart(funnel)
         st.dataframe(pd.DataFrame(d["groupes"]), hide_index=True, use_container_width=True)
         st.caption("Médianes de survie (Kaplan-Meier) en mois. Descriptif sur données fabriquées, pas un test statistique.")

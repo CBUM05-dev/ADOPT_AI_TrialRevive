@@ -19,6 +19,15 @@ def test_numbers_match_engine():
 def test_sources_are_real_links_and_unverified_is_flagged():
     d, _, _ = run()
     assert d["sources"] and all(s["lien"].startswith("https://clinicaltrials.gov/study/NCT") for s in d["sources"])
-    assert d["force_preuve"] != "forte"  # tant que les réanalyses ne sont pas vérifiées
+    assert d["verdict"]["preuve_verifiee"] is False  # tant que les réanalyses ne sont pas vérifiées
     md = dossier.to_markdown(d)
     assert "à vérifier" in md and "FICTIF" in md.upper()
+
+
+def test_verdict_and_sizes_in_dossier():
+    d, _, _ = run()
+    v = d["verdict"]
+    assert v["R"] == "R0" and v["E"] in ("E3", "E4") and v["G"]
+    assert d["essai_confirmation"]["evenements_selectionnes"] < d["essai_confirmation"]["evenements_tous"]
+    md = dossier.to_markdown(d)
+    assert "ATTEIGNABLE" in md and "à confirmer" in md and "Schoenfeld" in md

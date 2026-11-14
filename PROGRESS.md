@@ -53,3 +53,14 @@ Statuts : ⬜ à faire · 🟨 en cours · ✅ fini et vérifié · ❌ bloqué 
 | Heure | Qui | Fait | Reste |
 |-------|-----|------|-------|
 | | | | |
+
+
+## Mise à jour : alignement sur la description technique (nuit du 14 au 15 nov.)
+- ✅ Exigences à 3 niveaux (obligatoire / toléré / idéal) + plafonds de preuve : src/tolerances.py, src/engine.py
+- ✅ Notes R, E, G + taille de l'essai de confirmation (351 vs 88 événements) : src/verdict.py
+- ✅ Échelle patient S0 à S4, masquage < 5, résultat « indéterminé » : src/engine.py, src/fake_data.py
+- ✅ Dossier et écran branchés sur le verdict : src/dossier.py, app.py
+- 28 tests passent.
+- À FAIRE HUMAIN : valider les scores des tolérances (valeurs de travail) dans src/tolerances.py ; vérifier src/reanalyses.py.
+- NON FAIT (hors prototype) : veille automatique de la littérature (modes push), horloge commune des dates, normalisation par vocabulaires médicaux, index interne/externe séparés.
+- ⚠ data/internal_trial.csv a été régénéré (nouvelles colonnes) : refaire un `git add . && git commit`.

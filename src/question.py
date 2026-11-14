@@ -32,6 +32,17 @@ def question_card(drug: str, marker: str, text: str) -> dict:
             "analyse_sous_groupe": True,
             "taille_min": 100,
         },
+        # Trois niveaux : obligatoire (sinon éliminé) / toléré (note et plafond de preuve) / idéal (bonus)
+        "niveaux": {
+            "randomise": "obligatoire",
+            "traitement": "obligatoire (même classe = toléré)",
+            "biomarqueur_mesure": "obligatoire",
+            "analyse_sous_groupe": "obligatoire",
+            "taille_min": "obligatoire",
+            "couverture": "obligatoire >= 60 % ; toléré 60-80 % ; idéal >= 80 %",
+            "critere": "toléré si critère de remplacement",
+            "medicament_exact": "idéal",
+        },
         "methodes_valides": METHODES_VALIDES,
         "reponse_attendue": f"effet de {drug} différent selon le statut {marker.upper()} (muté vs sauvage)",
         "validee_par_humain": False,

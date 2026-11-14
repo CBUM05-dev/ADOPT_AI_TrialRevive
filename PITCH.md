@@ -1,12 +1,12 @@
 # Pitch TrialRevive — 5 minutes (+ 3 min de questions)
 
-Chiffres ci-dessous = ceux de la démo actuelle (104 essais publics, 6 retenus, 98 écartés, 400 faux patients -> 306 utilisables). Les relire à l'écran avant de parler.
+Chiffres ci-dessous = ceux de la démo actuelle (104 essais publics, 6 retenus, 98 écartés, 400 faux patients -> 252 complets (échelle S0 à S4)). Les relire à l'écran avant de parler.
 
 | Temps | Qui | Contenu |
 |-------|-----|---------|
 | 0:00-0:45 | Pitch | **Problème.** Des centaines d'essais cliniques existent, mais personne ne sait vite lesquels peuvent répondre à une nouvelle question scientifique. Monter un nouvel essai coûte des années. Beaucoup d'anciens essais contiennent déjà la réponse : ils n'ont pas été conçus pour elle. |
 | 0:45-1:15 | Pitch | **Idée.** On pose une question, TrialRevive rend un dossier de faisabilité : quels essais, quelle force de preuve, quel gain, avec les sources. Cas réel : le panitumumab et KRAS, dont on connaît la bonne réponse. |
-| 1:15-3:45 | Démo (bouton « Cas de démo ») | 1. La question. 2. Onglet **retenus** : 6 essais sur 104 (dont PRIME). 3. Onglet **écartés** : 98 rejets, chacun avec sa raison. Montrer le point fort : 26 essais récents recrutent seulement des KRAS sauvages, donc ne peuvent pas comparer ; les essais pivots, conçus avant KRAS, le peuvent par réanalyse. 4. Onglet **patients** : 400 -> 306 utilisables sur l'essai interne fictif, sans que les données sortent. 5. **Dossier** : force de la preuve, gain, sources cliquables. |
+| 1:15-3:45 | Démo (bouton « Cas de démo ») | 1. La question. 2. Onglet **retenus** : 6 essais sur 104 (dont PRIME). 3. Onglet **écartés** : 98 rejets, chacun avec sa raison. Montrer le point fort : 26 essais récents recrutent seulement des KRAS sauvages, donc ne peuvent pas comparer ; les essais pivots, conçus avant KRAS, le peuvent par réanalyse. 4. Onglet **patients** : 400 -> 252 complets sur l'essai interne fictif, sans que les données sortent. 5. **Dossier** : force de la preuve, gain, sources cliquables. |
 | 3:45-4:30 | Pitch | **Comparaison** avec une IA généraliste (onglet Comparaison, à remplir) : elle ne compte pas les patients et ses sources doivent être vérifiées une à une. |
 | 4:30-5:00 | Pitch | **Ce que ça change** : transformer des essais passés en réponses pour de nouvelles questions. Suite : plus de pathologies, vraies données hospitalières en environnement sécurisé. L'équipe. |
 

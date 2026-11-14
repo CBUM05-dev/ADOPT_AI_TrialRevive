@@ -1,402 +1,402 @@
 # DONNÉES FICTIVES - générées par programme (seed=42). Aucun patient réel.
-patient_id,age,sexe,traitement,kras_statut,methode_test,survie_mois,evenement,date_inclusion
-FAKE-0001,64,M,panitumumab,muté,KRAS exons 2-4 (complet),6.7,1,2017-07-10
-FAKE-0002,52,F,panitumumab,sauvage,KRAS exons 2-4 (complet),20.0,1,2019-12-04
-FAKE-0003,67,F,panitumumab,sauvage,KRAS exon 2 seulement,5.1,1,2016-03-04
-FAKE-0004,69,M,panitumumab,sauvage,KRAS exons 2-4 (complet),25.4,0,2019-09-21
-FAKE-0005,64,F,panitumumab,sauvage,KRAS exons 2-4 (complet),20.9,1,2015-07-12
-FAKE-0006,65,M,panitumumab,muté,KRAS exon 2 seulement,12.4,1,2016-02-17
-FAKE-0007,60,M,panitumumab,sauvage,KRAS exon 2 seulement,22.8,1,2016-09-09
-FAKE-0008,78,F,panitumumab,muté,KRAS exons 2-4 (complet),10.9,1,2015-03-09
-FAKE-0009,54,F,controle,muté,KRAS exons 2-4 (complet),1.1,1,2019-01-28
-FAKE-0010,57,M,controle,sauvage,test partiel (non valide),4.8,1,2019-04-11
-FAKE-0011,63,F,controle,sauvage,KRAS exons 2-4 (complet),27.2,1,2016-11-30
-FAKE-0012,72,F,panitumumab,muté,KRAS exon 2 seulement,20.2,1,2019-03-07
-FAKE-0013,48,M,controle,muté,test partiel (non valide),22.3,1,2018-11-10
-FAKE-0014,50,M,controle,muté,KRAS exon 2 seulement,25.3,0,2019-01-02
-FAKE-0015,43,M,panitumumab,muté,KRAS exons 2-4 (complet),9.7,1,2019-01-04
-FAKE-0016,63,F,panitumumab,muté,KRAS exons 2-4 (complet),9.0,1,2017-11-12
-FAKE-0017,52,F,panitumumab,sauvage,KRAS exons 2-4 (complet),14.0,1,2015-07-22
-FAKE-0018,59,F,panitumumab,muté,KRAS exons 2-4 (complet),0.8,1,2019-08-13
-FAKE-0019,70,F,controle,inconnu,non testé,9.6,1,2018-01-15
-FAKE-0020,57,F,panitumumab,inconnu,non testé,21.1,1,2019-07-03
-FAKE-0021,65,M,panitumumab,sauvage,test partiel (non valide),6.7,1,2019-10-17
-FAKE-0022,60,F,panitumumab,muté,KRAS exons 2-4 (complet),25.8,1,2015-12-08
-FAKE-0023,70,M,controle,sauvage,KRAS exons 2-4 (complet),13.1,1,2017-01-03
-FAKE-0024,68,M,controle,sauvage,KRAS exons 2-4 (complet),15.5,1,2015-12-18
-FAKE-0025,56,M,controle,sauvage,test partiel (non valide),12.2,1,2015-04-03
-FAKE-0026,61,F,controle,sauvage,KRAS exons 2-4 (complet),22.1,1,2019-10-30
-FAKE-0027,73,F,controle,sauvage,KRAS exons 2-4 (complet),8.0,1,2019-08-13
-FAKE-0028,67,M,controle,sauvage,KRAS exons 2-4 (complet),10.1,1,2019-08-28
-FAKE-0029,49,F,panitumumab,muté,KRAS exons 2-4 (complet),3.2,1,2019-06-01
-FAKE-0030,70,M,panitumumab,sauvage,KRAS exons 2-4 (complet),14.6,1,2018-03-30
-FAKE-0031,52,F,panitumumab,muté,KRAS exons 2-4 (complet),3.1,1,2017-08-10
-FAKE-0032,77,F,controle,sauvage,KRAS exons 2-4 (complet),23.4,1,2019-12-15
-FAKE-0033,73,M,controle,sauvage,KRAS exons 2-4 (complet),11.1,1,2017-10-04
-FAKE-0034,66,M,panitumumab,muté,KRAS exons 2-4 (complet),,1,2018-03-18
-FAKE-0035,65,F,panitumumab,sauvage,KRAS exons 2-4 (complet),15.7,0,2016-01-22
-FAKE-0036,61,M,controle,muté,KRAS exons 2-4 (complet),3.2,1,2018-09-24
-FAKE-0037,70,F,panitumumab,sauvage,KRAS exons 2-4 (complet),5.2,1,2019-02-04
-FAKE-0038,59,M,panitumumab,muté,KRAS exons 2-4 (complet),32.9,0,2018-05-23
-FAKE-0039,65,M,panitumumab,inconnu,non testé,14.6,1,2017-06-28
-FAKE-0040,72,M,panitumumab,muté,KRAS exons 2-4 (complet),9.8,1,2015-12-28
-FAKE-0041,57,M,controle,inconnu,non testé,0.2,1,2015-03-03
-FAKE-0042,57,F,controle,sauvage,KRAS exons 2-4 (complet),6.4,1,2018-02-18
-FAKE-0043,51,M,panitumumab,sauvage,KRAS exons 2-4 (complet),16.3,0,2018-05-31
-FAKE-0044,52,F,controle,sauvage,KRAS exons 2-4 (complet),17.5,0,2018-11-11
-FAKE-0045,45,F,panitumumab,sauvage,KRAS exons 2-4 (complet),10.3,1,2019-10-01
-FAKE-0046,70,F,controle,inconnu,non testé,13.7,1,2017-06-26
-FAKE-0047,81,F,controle,muté,KRAS exon 2 seulement,6.1,1,2019-02-22
-FAKE-0048,77,M,controle,sauvage,KRAS exons 2-4 (complet),7.8,1,2018-07-31
-FAKE-0049,47,F,controle,muté,KRAS exons 2-4 (complet),5.6,1,2016-05-20
-FAKE-0050,70,F,controle,sauvage,KRAS exons 2-4 (complet),3.2,1,2019-03-23
-FAKE-0051,77,F,panitumumab,muté,KRAS exons 2-4 (complet),9.1,1,2015-04-08
-FAKE-0052,58,M,controle,sauvage,KRAS exons 2-4 (complet),8.7,1,2017-12-28
-FAKE-0053,64,M,panitumumab,sauvage,KRAS exon 2 seulement,16.1,0,2019-09-13
-FAKE-0054,43,M,panitumumab,sauvage,KRAS exon 2 seulement,2.3,1,2018-04-17
-FAKE-0055,66,F,panitumumab,sauvage,KRAS exons 2-4 (complet),12.1,1,2019-09-07
-FAKE-0056,52,F,controle,sauvage,KRAS exons 2-4 (complet),15.6,0,2015-04-13
-FAKE-0057,65,M,controle,sauvage,KRAS exons 2-4 (complet),9.4,1,2017-08-29
-FAKE-0058,47,M,controle,sauvage,KRAS exons 2-4 (complet),31.7,0,2018-11-25
-FAKE-0059,68,M,panitumumab,sauvage,KRAS exons 2-4 (complet),9.8,1,2018-03-18
-FAKE-0060,73,M,panitumumab,inconnu,non testé,,1,2019-05-26
-FAKE-0061,55,M,panitumumab,muté,KRAS exons 2-4 (complet),24.8,1,2017-04-24
-FAKE-0062,52,M,controle,muté,KRAS exons 2-4 (complet),0.9,1,2018-05-30
-FAKE-0063,41,F,controle,muté,test partiel (non valide),7.2,1,2017-02-05
-FAKE-0064,60,F,panitumumab,sauvage,KRAS exons 2-4 (complet),8.4,1,2019-05-11
-FAKE-0065,57,F,controle,sauvage,KRAS exons 2-4 (complet),12.0,1,2015-08-06
-FAKE-0066,47,F,panitumumab,sauvage,KRAS exon 2 seulement,18.7,0,2016-04-08
-FAKE-0067,68,F,panitumumab,sauvage,KRAS exons 2-4 (complet),,1,2015-06-26
-FAKE-0068,59,M,panitumumab,muté,KRAS exons 2-4 (complet),,0,2018-07-05
-FAKE-0069,52,F,controle,sauvage,KRAS exons 2-4 (complet),0.6,1,2016-02-29
-FAKE-0070,57,F,panitumumab,sauvage,test partiel (non valide),7.9,1,2016-08-01
-FAKE-0071,74,F,panitumumab,muté,KRAS exons 2-4 (complet),10.1,1,2019-03-07
-FAKE-0072,69,F,controle,muté,KRAS exons 2-4 (complet),6.2,1,2016-10-19
-FAKE-0073,62,F,panitumumab,muté,KRAS exons 2-4 (complet),1.8,1,2015-09-24
-FAKE-0074,69,F,controle,muté,KRAS exons 2-4 (complet),3.0,1,2015-02-08
-FAKE-0075,51,M,panitumumab,muté,KRAS exons 2-4 (complet),5.8,1,2016-02-18
-FAKE-0076,63,M,panitumumab,inconnu,non testé,6.7,1,2019-07-28
-FAKE-0077,64,F,panitumumab,sauvage,KRAS exons 2-4 (complet),20.5,0,2017-09-28
-FAKE-0078,58,M,panitumumab,muté,KRAS exons 2-4 (complet),13.7,1,2019-12-21
-FAKE-0079,67,M,controle,sauvage,KRAS exons 2-4 (complet),14.5,1,2016-01-28
-FAKE-0080,55,M,panitumumab,sauvage,KRAS exon 2 seulement,19.6,1,2016-10-03
-FAKE-0081,68,F,controle,inconnu,non testé,18.1,1,2015-10-25
-FAKE-0082,69,M,panitumumab,sauvage,KRAS exons 2-4 (complet),25.9,0,2016-12-28
-FAKE-0083,34,F,panitumumab,sauvage,KRAS exon 2 seulement,7.1,1,2017-10-25
-FAKE-0084,75,F,controle,muté,KRAS exons 2-4 (complet),28.0,1,2019-01-14
-FAKE-0085,33,F,controle,inconnu,non testé,0.2,1,2016-11-02
-FAKE-0086,57,M,panitumumab,sauvage,KRAS exons 2-4 (complet),29.2,0,2018-11-09
-FAKE-0087,73,F,controle,inconnu,non testé,1.4,1,2018-02-16
-FAKE-0088,60,F,controle,muté,KRAS exon 2 seulement,1.5,1,2016-06-16
-FAKE-0089,48,F,panitumumab,sauvage,KRAS exon 2 seulement,11.5,1,2019-07-23
-FAKE-0090,52,F,panitumumab,sauvage,KRAS exons 2-4 (complet),3.4,1,2017-03-03
-FAKE-0091,73,M,panitumumab,muté,test partiel (non valide),0.1,1,2015-10-03
-FAKE-0092,44,F,panitumumab,sauvage,KRAS exons 2-4 (complet),0.0,1,2019-10-23
-FAKE-0093,74,F,panitumumab,sauvage,KRAS exons 2-4 (complet),6.8,1,2019-07-26
-FAKE-0094,62,F,panitumumab,muté,test partiel (non valide),,1,2015-04-01
-FAKE-0095,51,F,controle,sauvage,KRAS exons 2-4 (complet),1.7,1,2019-07-06
-FAKE-0096,57,F,controle,sauvage,KRAS exon 2 seulement,11.9,1,2019-09-25
-FAKE-0097,53,M,panitumumab,muté,KRAS exons 2-4 (complet),19.9,1,2019-02-22
-FAKE-0098,72,F,panitumumab,sauvage,KRAS exon 2 seulement,4.4,1,2016-04-10
-FAKE-0099,70,F,panitumumab,sauvage,KRAS exons 2-4 (complet),6.9,1,2018-02-26
-FAKE-0100,46,M,panitumumab,muté,KRAS exons 2-4 (complet),18.3,0,2017-09-09
-FAKE-0101,59,M,panitumumab,inconnu,non testé,19.1,1,2018-02-05
-FAKE-0102,54,F,panitumumab,sauvage,KRAS exons 2-4 (complet),,1,2018-01-30
-FAKE-0103,76,F,controle,muté,KRAS exons 2-4 (complet),24.2,1,2018-03-12
-FAKE-0104,49,F,controle,inconnu,non testé,1.4,1,2017-07-27
-FAKE-0105,79,M,controle,sauvage,KRAS exons 2-4 (complet),,1,2018-06-14
-FAKE-0106,63,F,controle,muté,KRAS exons 2-4 (complet),17.7,1,2017-08-19
-FAKE-0107,51,F,panitumumab,sauvage,KRAS exons 2-4 (complet),9.1,1,2015-01-31
-FAKE-0108,56,M,controle,muté,KRAS exons 2-4 (complet),4.7,1,2015-03-06
-FAKE-0109,55,F,controle,inconnu,non testé,10.7,1,2019-10-15
-FAKE-0110,50,F,controle,sauvage,KRAS exons 2-4 (complet),18.9,1,2019-07-18
-FAKE-0111,64,M,panitumumab,sauvage,KRAS exon 2 seulement,,0,2017-12-04
-FAKE-0112,51,F,controle,muté,KRAS exon 2 seulement,27.6,0,2015-11-15
-FAKE-0113,41,M,controle,sauvage,KRAS exon 2 seulement,2.6,1,2018-11-27
-FAKE-0114,59,M,controle,muté,KRAS exons 2-4 (complet),3.6,1,2015-09-19
-FAKE-0115,45,F,controle,muté,KRAS exon 2 seulement,17.5,0,2016-11-19
-FAKE-0116,55,M,controle,muté,KRAS exons 2-4 (complet),2.6,1,2016-08-24
-FAKE-0117,54,M,panitumumab,sauvage,KRAS exons 2-4 (complet),0.2,1,2015-01-23
-FAKE-0118,54,M,controle,muté,KRAS exons 2-4 (complet),3.1,1,2019-01-12
-FAKE-0119,83,F,panitumumab,inconnu,non testé,5.7,1,2017-07-19
-FAKE-0120,64,F,panitumumab,sauvage,KRAS exons 2-4 (complet),7.4,1,2016-07-31
-FAKE-0121,65,F,panitumumab,muté,KRAS exons 2-4 (complet),13.0,1,2017-07-14
-FAKE-0122,45,M,controle,muté,KRAS exons 2-4 (complet),13.2,1,2015-01-01
-FAKE-0123,56,F,panitumumab,muté,test partiel (non valide),6.8,1,2017-03-08
-FAKE-0124,65,M,panitumumab,sauvage,KRAS exons 2-4 (complet),19.4,0,2017-08-06
-FAKE-0125,53,M,panitumumab,sauvage,KRAS exons 2-4 (complet),13.6,1,2016-09-11
-FAKE-0126,72,M,panitumumab,muté,test partiel (non valide),12.1,1,2019-02-24
-FAKE-0127,51,F,panitumumab,sauvage,KRAS exons 2-4 (complet),31.0,0,2016-03-31
-FAKE-0128,60,F,controle,muté,KRAS exons 2-4 (complet),18.4,1,2015-09-09
-FAKE-0129,57,M,controle,sauvage,KRAS exon 2 seulement,4.1,1,2017-08-20
-FAKE-0130,65,F,controle,inconnu,non testé,2.2,1,2019-06-08
-FAKE-0131,57,F,panitumumab,sauvage,KRAS exon 2 seulement,39.0,0,2016-11-15
-FAKE-0132,60,M,controle,sauvage,KRAS exons 2-4 (complet),14.0,1,2015-03-27
-FAKE-0133,61,M,controle,sauvage,KRAS exons 2-4 (complet),23.2,1,2019-11-06
-FAKE-0134,56,M,controle,muté,KRAS exons 2-4 (complet),11.3,1,2017-03-21
-FAKE-0135,68,M,controle,muté,KRAS exons 2-4 (complet),11.3,1,2015-11-12
-FAKE-0136,65,F,controle,muté,KRAS exons 2-4 (complet),33.7,0,2018-01-28
-FAKE-0137,62,F,controle,sauvage,KRAS exons 2-4 (complet),32.2,1,2016-08-06
-FAKE-0138,59,F,controle,sauvage,KRAS exons 2-4 (complet),0.9,1,2019-09-08
-FAKE-0139,71,F,controle,sauvage,KRAS exon 2 seulement,2.5,1,2016-06-20
-FAKE-0140,61,M,controle,sauvage,KRAS exons 2-4 (complet),5.8,1,2017-09-30
-FAKE-0141,60,F,controle,muté,KRAS exons 2-4 (complet),5.5,1,2017-09-18
-FAKE-0142,64,M,controle,sauvage,KRAS exons 2-4 (complet),,1,2016-03-18
-FAKE-0143,80,M,panitumumab,muté,KRAS exon 2 seulement,12.8,1,2017-06-30
-FAKE-0144,50,M,panitumumab,muté,KRAS exons 2-4 (complet),6.4,1,2015-07-19
-FAKE-0145,71,F,controle,sauvage,KRAS exons 2-4 (complet),17.8,0,2018-03-20
-FAKE-0146,44,F,controle,inconnu,non testé,5.7,1,2018-10-15
-FAKE-0147,65,M,panitumumab,sauvage,KRAS exons 2-4 (complet),15.1,1,2019-09-30
-FAKE-0148,79,M,controle,muté,KRAS exons 2-4 (complet),7.1,1,2016-08-17
-FAKE-0149,68,F,panitumumab,sauvage,KRAS exons 2-4 (complet),21.5,1,2016-06-04
-FAKE-0150,65,F,panitumumab,muté,KRAS exon 2 seulement,3.3,1,2017-09-28
-FAKE-0151,57,M,panitumumab,sauvage,KRAS exons 2-4 (complet),22.4,0,2018-06-18
-FAKE-0152,63,M,controle,sauvage,KRAS exon 2 seulement,17.3,0,2019-12-17
-FAKE-0153,60,F,panitumumab,muté,test partiel (non valide),0.8,1,2015-02-15
-FAKE-0154,55,F,panitumumab,muté,KRAS exons 2-4 (complet),0.1,1,2016-03-10
-FAKE-0155,60,M,panitumumab,muté,KRAS exons 2-4 (complet),6.1,1,2016-04-23
-FAKE-0156,65,M,panitumumab,inconnu,non testé,12.3,1,2016-04-11
-FAKE-0157,55,M,panitumumab,sauvage,KRAS exons 2-4 (complet),26.2,1,2017-04-26
-FAKE-0158,55,F,controle,sauvage,KRAS exon 2 seulement,6.9,1,2019-05-13
-FAKE-0159,49,F,controle,sauvage,KRAS exons 2-4 (complet),8.1,1,2015-02-26
-FAKE-0160,67,M,panitumumab,sauvage,KRAS exons 2-4 (complet),18.8,1,2019-01-28
-FAKE-0161,68,M,controle,muté,KRAS exons 2-4 (complet),6.5,1,2018-02-01
-FAKE-0162,65,M,controle,inconnu,non testé,37.9,0,2018-01-27
-FAKE-0163,73,F,controle,muté,KRAS exon 2 seulement,0.9,1,2018-05-22
-FAKE-0164,64,F,panitumumab,sauvage,KRAS exons 2-4 (complet),2.4,1,2015-07-30
-FAKE-0165,67,F,controle,sauvage,KRAS exons 2-4 (complet),9.7,1,2018-09-24
-FAKE-0166,66,F,panitumumab,sauvage,KRAS exons 2-4 (complet),6.3,1,2016-03-28
-FAKE-0167,62,M,panitumumab,inconnu,non testé,25.1,0,2017-07-31
-FAKE-0168,58,F,controle,muté,test partiel (non valide),5.5,1,2018-05-20
-FAKE-0169,85,M,panitumumab,sauvage,KRAS exons 2-4 (complet),4.6,1,2018-01-07
-FAKE-0170,58,M,panitumumab,sauvage,KRAS exons 2-4 (complet),3.6,1,2016-08-12
-FAKE-0171,56,M,panitumumab,sauvage,KRAS exon 2 seulement,19.5,1,2016-12-23
-FAKE-0172,67,M,panitumumab,muté,test partiel (non valide),2.1,1,2017-05-19
-FAKE-0173,66,F,panitumumab,muté,KRAS exons 2-4 (complet),6.5,1,2015-03-17
-FAKE-0174,49,M,panitumumab,muté,KRAS exons 2-4 (complet),13.2,1,2018-08-18
-FAKE-0175,74,F,panitumumab,muté,KRAS exon 2 seulement,14.9,1,2015-07-02
-FAKE-0176,62,F,controle,sauvage,KRAS exon 2 seulement,6.2,1,2017-04-16
-FAKE-0177,52,F,panitumumab,sauvage,KRAS exons 2-4 (complet),1.0,1,2018-04-10
-FAKE-0178,75,F,controle,sauvage,KRAS exons 2-4 (complet),5.9,1,2015-05-27
-FAKE-0179,69,M,controle,sauvage,KRAS exon 2 seulement,7.1,1,2019-12-22
-FAKE-0180,50,F,controle,sauvage,KRAS exon 2 seulement,8.0,1,2016-11-19
-FAKE-0181,81,F,panitumumab,muté,KRAS exon 2 seulement,3.2,1,2015-01-29
-FAKE-0182,70,F,panitumumab,sauvage,KRAS exons 2-4 (complet),35.7,0,2018-04-17
-FAKE-0183,63,F,controle,muté,KRAS exons 2-4 (complet),18.0,1,2017-10-14
-FAKE-0184,79,M,controle,muté,test partiel (non valide),1.2,1,2018-03-14
-FAKE-0185,65,F,controle,sauvage,KRAS exon 2 seulement,1.1,1,2018-10-02
-FAKE-0186,63,M,controle,sauvage,KRAS exon 2 seulement,7.8,1,2017-05-18
-FAKE-0187,56,F,panitumumab,muté,KRAS exons 2-4 (complet),18.5,1,2019-02-17
-FAKE-0188,69,M,panitumumab,sauvage,KRAS exons 2-4 (complet),1.8,1,2016-11-06
-FAKE-0189,68,F,panitumumab,sauvage,KRAS exon 2 seulement,32.6,1,2017-09-21
-FAKE-0190,63,F,panitumumab,sauvage,KRAS exons 2-4 (complet),21.6,1,2015-10-17
-FAKE-0191,55,F,panitumumab,sauvage,test partiel (non valide),33.7,1,2018-02-05
-FAKE-0192,64,M,panitumumab,sauvage,KRAS exons 2-4 (complet),18.4,0,2016-04-22
-FAKE-0193,62,M,controle,muté,KRAS exon 2 seulement,13.4,0,2018-06-25
-FAKE-0194,50,F,panitumumab,sauvage,KRAS exon 2 seulement,,1,2019-01-01
-FAKE-0195,48,M,controle,sauvage,KRAS exons 2-4 (complet),20.6,0,2019-04-17
-FAKE-0196,69,M,controle,sauvage,KRAS exons 2-4 (complet),13.0,1,2019-08-23
-FAKE-0197,37,F,controle,sauvage,KRAS exons 2-4 (complet),11.1,1,2015-08-12
-FAKE-0198,65,F,controle,muté,KRAS exons 2-4 (complet),9.7,1,2015-09-09
-FAKE-0199,58,M,panitumumab,sauvage,KRAS exons 2-4 (complet),28.3,1,2019-08-18
-FAKE-0200,76,M,panitumumab,sauvage,KRAS exons 2-4 (complet),7.0,1,2016-11-26
-FAKE-0201,58,M,panitumumab,sauvage,test partiel (non valide),32.4,0,2015-02-17
-FAKE-0202,70,F,panitumumab,inconnu,non testé,24.4,0,2016-06-07
-FAKE-0203,59,F,panitumumab,sauvage,KRAS exons 2-4 (complet),3.6,1,2019-03-07
-FAKE-0204,64,F,controle,sauvage,KRAS exons 2-4 (complet),,1,2016-10-09
-FAKE-0205,70,F,controle,sauvage,KRAS exons 2-4 (complet),17.1,1,2015-05-21
-FAKE-0206,58,M,controle,muté,KRAS exons 2-4 (complet),1.7,1,2018-08-10
-FAKE-0207,73,F,panitumumab,sauvage,KRAS exons 2-4 (complet),11.3,1,2015-12-22
-FAKE-0208,53,F,panitumumab,sauvage,KRAS exons 2-4 (complet),6.9,1,2016-10-05
-FAKE-0209,66,F,panitumumab,muté,KRAS exons 2-4 (complet),2.3,1,2015-01-08
-FAKE-0210,72,F,panitumumab,muté,KRAS exons 2-4 (complet),3.4,1,2018-01-03
-FAKE-0211,70,M,controle,sauvage,test partiel (non valide),17.8,1,2017-03-23
-FAKE-0212,82,F,panitumumab,muté,KRAS exons 2-4 (complet),8.1,1,2019-05-02
-FAKE-0213,55,M,controle,muté,KRAS exons 2-4 (complet),4.5,1,2016-09-02
-FAKE-0214,49,F,panitumumab,muté,KRAS exon 2 seulement,2.7,1,2016-01-09
-FAKE-0215,53,F,controle,muté,KRAS exon 2 seulement,23.4,1,2015-10-30
-FAKE-0216,70,F,panitumumab,muté,KRAS exons 2-4 (complet),7.1,1,2016-01-01
-FAKE-0217,68,M,panitumumab,sauvage,KRAS exons 2-4 (complet),18.9,0,2017-04-03
-FAKE-0218,64,F,controle,muté,KRAS exons 2-4 (complet),7.2,1,2015-06-09
-FAKE-0219,52,F,controle,sauvage,KRAS exons 2-4 (complet),3.9,1,2017-01-04
-FAKE-0220,71,M,panitumumab,sauvage,KRAS exons 2-4 (complet),26.6,0,2019-04-09
-FAKE-0221,51,M,panitumumab,muté,KRAS exons 2-4 (complet),8.3,1,2018-11-01
-FAKE-0222,75,F,controle,muté,KRAS exons 2-4 (complet),13.4,1,2018-03-08
-FAKE-0223,90,M,controle,sauvage,KRAS exons 2-4 (complet),,1,2019-06-18
-FAKE-0224,67,M,panitumumab,muté,test partiel (non valide),29.7,1,2018-11-24
-FAKE-0225,69,F,controle,muté,KRAS exons 2-4 (complet),16.6,1,2018-04-05
-FAKE-0226,58,M,panitumumab,inconnu,non testé,,1,2019-04-25
-FAKE-0227,45,F,controle,inconnu,non testé,20.7,1,2015-08-16
-FAKE-0228,57,F,panitumumab,sauvage,KRAS exons 2-4 (complet),6.5,1,2019-02-02
-FAKE-0229,52,M,panitumumab,muté,KRAS exons 2-4 (complet),4.5,1,2016-06-23
-FAKE-0230,49,F,panitumumab,sauvage,KRAS exons 2-4 (complet),26.5,1,2018-08-30
-FAKE-0231,80,M,panitumumab,sauvage,KRAS exons 2-4 (complet),7.8,1,2019-07-25
-FAKE-0232,66,M,controle,muté,KRAS exon 2 seulement,4.9,1,2017-06-24
-FAKE-0233,67,F,panitumumab,sauvage,KRAS exon 2 seulement,36.5,0,2015-06-11
-FAKE-0234,60,F,panitumumab,muté,test partiel (non valide),19.5,1,2016-11-06
-FAKE-0235,61,F,controle,muté,test partiel (non valide),5.2,1,2017-01-12
-FAKE-0236,73,M,panitumumab,sauvage,test partiel (non valide),12.2,1,2019-09-06
-FAKE-0237,63,F,controle,muté,test partiel (non valide),22.6,1,2019-09-17
-FAKE-0238,68,F,panitumumab,muté,KRAS exons 2-4 (complet),1.1,1,2017-11-03
-FAKE-0239,61,M,controle,sauvage,KRAS exons 2-4 (complet),16.6,1,2019-10-01
-FAKE-0240,60,M,controle,inconnu,non testé,2.4,1,2017-03-07
-FAKE-0241,49,M,panitumumab,sauvage,KRAS exons 2-4 (complet),21.4,0,2017-01-20
-FAKE-0242,43,F,controle,sauvage,KRAS exons 2-4 (complet),8.3,1,2019-03-07
-FAKE-0243,60,M,controle,inconnu,non testé,2.3,1,2018-05-02
-FAKE-0244,64,M,controle,muté,KRAS exons 2-4 (complet),0.0,1,2017-08-11
-FAKE-0245,50,M,panitumumab,sauvage,KRAS exon 2 seulement,0.7,1,2017-04-13
-FAKE-0246,63,F,panitumumab,muté,KRAS exons 2-4 (complet),4.6,1,2018-07-11
-FAKE-0247,64,M,controle,muté,KRAS exons 2-4 (complet),20.0,1,2018-10-07
-FAKE-0248,41,F,controle,sauvage,KRAS exons 2-4 (complet),0.5,1,2017-06-14
-FAKE-0249,54,M,panitumumab,sauvage,KRAS exons 2-4 (complet),25.9,0,2015-02-27
-FAKE-0250,67,F,controle,sauvage,KRAS exons 2-4 (complet),13.5,0,2015-07-05
-FAKE-0251,67,F,controle,muté,KRAS exon 2 seulement,5.6,1,2015-09-21
-FAKE-0252,51,M,controle,muté,KRAS exons 2-4 (complet),17.4,1,2017-04-23
-FAKE-0253,65,M,panitumumab,inconnu,non testé,0.3,1,2018-01-25
-FAKE-0254,73,M,controle,muté,KRAS exon 2 seulement,1.7,1,2019-01-06
-FAKE-0255,71,F,controle,muté,KRAS exons 2-4 (complet),3.7,1,2016-02-29
-FAKE-0256,62,M,panitumumab,muté,KRAS exons 2-4 (complet),6.4,1,2018-12-06
-FAKE-0257,58,F,panitumumab,sauvage,KRAS exons 2-4 (complet),25.0,1,2018-04-30
-FAKE-0258,57,M,controle,sauvage,KRAS exon 2 seulement,19.2,0,2015-04-05
-FAKE-0259,68,M,controle,sauvage,KRAS exon 2 seulement,,1,2016-10-02
-FAKE-0260,65,M,panitumumab,muté,KRAS exons 2-4 (complet),8.3,1,2016-07-06
-FAKE-0261,69,M,panitumumab,muté,test partiel (non valide),36.8,0,2019-06-07
-FAKE-0262,64,M,panitumumab,sauvage,KRAS exons 2-4 (complet),16.0,1,2019-08-09
-FAKE-0263,71,M,panitumumab,sauvage,KRAS exon 2 seulement,10.8,1,2019-02-04
-FAKE-0264,64,F,controle,sauvage,KRAS exons 2-4 (complet),22.4,1,2017-08-21
-FAKE-0265,71,F,controle,sauvage,KRAS exons 2-4 (complet),18.9,0,2017-06-18
-FAKE-0266,72,F,controle,sauvage,KRAS exon 2 seulement,,1,2016-07-22
-FAKE-0267,55,M,panitumumab,muté,KRAS exons 2-4 (complet),12.7,1,2018-11-11
-FAKE-0268,45,M,controle,muté,KRAS exons 2-4 (complet),32.0,1,2015-06-07
-FAKE-0269,78,F,panitumumab,sauvage,KRAS exons 2-4 (complet),9.0,1,2016-05-09
-FAKE-0270,66,F,controle,muté,KRAS exons 2-4 (complet),7.6,1,2015-09-04
-FAKE-0271,46,F,controle,sauvage,KRAS exon 2 seulement,10.1,1,2017-06-21
-FAKE-0272,56,F,panitumumab,sauvage,KRAS exon 2 seulement,17.3,1,2016-07-01
-FAKE-0273,71,F,controle,sauvage,KRAS exon 2 seulement,17.4,1,2015-12-27
-FAKE-0274,60,M,panitumumab,sauvage,KRAS exons 2-4 (complet),24.2,1,2016-11-17
-FAKE-0275,58,M,panitumumab,sauvage,KRAS exons 2-4 (complet),11.0,1,2019-04-21
-FAKE-0276,77,F,panitumumab,inconnu,non testé,17.6,0,2017-10-15
-FAKE-0277,53,F,panitumumab,sauvage,KRAS exons 2-4 (complet),11.5,1,2019-02-11
-FAKE-0278,55,M,controle,sauvage,KRAS exons 2-4 (complet),3.5,1,2019-07-26
-FAKE-0279,65,M,panitumumab,muté,KRAS exons 2-4 (complet),11.3,1,2019-07-05
-FAKE-0280,67,M,controle,sauvage,test partiel (non valide),23.8,1,2016-10-02
-FAKE-0281,68,F,panitumumab,sauvage,KRAS exon 2 seulement,6.3,1,2019-05-21
-FAKE-0282,72,F,controle,muté,KRAS exon 2 seulement,11.6,1,2019-07-18
-FAKE-0283,65,F,panitumumab,muté,KRAS exons 2-4 (complet),4.6,1,2019-10-18
-FAKE-0284,68,M,panitumumab,inconnu,non testé,0.5,1,2016-10-02
-FAKE-0285,60,M,panitumumab,sauvage,KRAS exons 2-4 (complet),5.6,1,2016-02-21
-FAKE-0286,64,M,panitumumab,muté,KRAS exons 2-4 (complet),13.5,1,2017-12-02
-FAKE-0287,64,F,controle,muté,KRAS exons 2-4 (complet),17.9,0,2019-08-28
-FAKE-0288,65,F,controle,muté,KRAS exons 2-4 (complet),3.4,1,2019-07-02
-FAKE-0289,71,M,panitumumab,muté,KRAS exons 2-4 (complet),11.5,1,2017-11-08
-FAKE-0290,69,M,controle,inconnu,non testé,,1,2015-09-30
-FAKE-0291,63,M,controle,sauvage,KRAS exons 2-4 (complet),12.1,1,2017-02-10
-FAKE-0292,55,F,panitumumab,muté,test partiel (non valide),0.4,1,2018-07-27
-FAKE-0293,64,F,panitumumab,sauvage,KRAS exons 2-4 (complet),,1,2017-10-19
-FAKE-0294,63,F,controle,muté,test partiel (non valide),2.8,1,2016-09-22
-FAKE-0295,65,M,controle,muté,KRAS exons 2-4 (complet),4.4,1,2016-09-17
-FAKE-0296,85,M,controle,sauvage,KRAS exons 2-4 (complet),7.1,1,2015-04-20
-FAKE-0297,58,M,panitumumab,sauvage,KRAS exons 2-4 (complet),11.5,1,2016-06-10
-FAKE-0298,67,F,panitumumab,inconnu,non testé,8.9,1,2018-05-06
-FAKE-0299,74,M,panitumumab,sauvage,KRAS exons 2-4 (complet),2.8,1,2016-03-16
-FAKE-0300,64,F,panitumumab,sauvage,KRAS exons 2-4 (complet),26.6,0,2019-12-18
-FAKE-0301,86,M,controle,sauvage,KRAS exons 2-4 (complet),5.4,1,2015-05-31
-FAKE-0302,59,M,controle,inconnu,non testé,10.4,1,2017-12-10
-FAKE-0303,66,M,controle,sauvage,test partiel (non valide),21.7,0,2017-06-25
-FAKE-0304,55,M,panitumumab,inconnu,non testé,2.2,1,2019-03-01
-FAKE-0305,59,M,controle,sauvage,KRAS exons 2-4 (complet),10.9,1,2019-06-09
-FAKE-0306,65,F,panitumumab,sauvage,KRAS exons 2-4 (complet),,1,2017-09-18
-FAKE-0307,71,F,controle,muté,KRAS exons 2-4 (complet),19.3,0,2018-02-24
-FAKE-0308,66,M,panitumumab,sauvage,KRAS exons 2-4 (complet),13.3,1,2018-06-29
-FAKE-0309,76,M,controle,sauvage,KRAS exons 2-4 (complet),5.6,1,2017-08-08
-FAKE-0310,62,F,controle,sauvage,KRAS exons 2-4 (complet),0.2,1,2015-12-04
-FAKE-0311,60,M,panitumumab,sauvage,test partiel (non valide),21.2,0,2017-02-21
-FAKE-0312,90,F,controle,inconnu,non testé,1.5,1,2016-03-16
-FAKE-0313,67,M,panitumumab,inconnu,non testé,15.5,1,2017-04-27
-FAKE-0314,56,F,controle,muté,KRAS exon 2 seulement,4.8,1,2018-01-27
-FAKE-0315,56,M,panitumumab,sauvage,KRAS exon 2 seulement,33.4,0,2016-01-17
-FAKE-0316,54,F,controle,sauvage,KRAS exons 2-4 (complet),2.2,1,2016-03-31
-FAKE-0317,72,F,controle,muté,KRAS exons 2-4 (complet),18.1,0,2019-02-10
-FAKE-0318,59,M,controle,muté,test partiel (non valide),31.3,0,2016-11-20
-FAKE-0319,64,M,controle,muté,KRAS exons 2-4 (complet),4.1,1,2015-12-29
-FAKE-0320,62,F,controle,sauvage,KRAS exons 2-4 (complet),1.4,1,2018-07-25
-FAKE-0321,70,M,controle,sauvage,KRAS exons 2-4 (complet),13.8,1,2018-07-31
-FAKE-0322,55,F,controle,inconnu,non testé,4.0,1,2019-02-16
-FAKE-0323,52,F,panitumumab,sauvage,KRAS exon 2 seulement,7.9,1,2018-10-18
-FAKE-0324,65,F,controle,inconnu,non testé,17.6,1,2019-12-16
-FAKE-0325,69,F,controle,sauvage,KRAS exons 2-4 (complet),27.5,1,2017-11-15
-FAKE-0326,66,M,panitumumab,sauvage,KRAS exon 2 seulement,18.8,1,2016-06-07
-FAKE-0327,55,M,controle,muté,KRAS exon 2 seulement,,0,2019-04-24
-FAKE-0328,70,F,controle,sauvage,KRAS exons 2-4 (complet),1.6,1,2016-04-28
-FAKE-0329,56,F,panitumumab,sauvage,test partiel (non valide),30.9,0,2016-06-15
-FAKE-0330,58,M,panitumumab,inconnu,non testé,2.2,1,2019-02-21
-FAKE-0331,54,M,panitumumab,sauvage,KRAS exons 2-4 (complet),2.4,1,2019-05-28
-FAKE-0332,76,F,controle,muté,KRAS exons 2-4 (complet),4.0,1,2016-09-11
-FAKE-0333,69,F,controle,muté,KRAS exons 2-4 (complet),9.7,1,2018-08-24
-FAKE-0334,69,F,controle,muté,test partiel (non valide),2.4,1,2019-08-11
-FAKE-0335,75,F,controle,muté,KRAS exons 2-4 (complet),18.2,0,2018-12-28
-FAKE-0336,90,M,controle,sauvage,KRAS exons 2-4 (complet),3.3,1,2015-01-10
-FAKE-0337,46,M,panitumumab,sauvage,KRAS exons 2-4 (complet),32.8,0,2018-04-27
-FAKE-0338,56,M,panitumumab,sauvage,KRAS exons 2-4 (complet),18.6,0,2015-11-07
-FAKE-0339,57,M,controle,sauvage,KRAS exons 2-4 (complet),7.4,1,2019-03-25
-FAKE-0340,54,F,controle,sauvage,KRAS exons 2-4 (complet),27.3,0,2015-05-03
-FAKE-0341,52,M,controle,sauvage,KRAS exons 2-4 (complet),21.6,1,2019-12-18
-FAKE-0342,60,M,controle,muté,test partiel (non valide),6.8,1,2015-11-20
-FAKE-0343,51,M,panitumumab,muté,KRAS exons 2-4 (complet),19.4,1,2017-02-05
-FAKE-0344,66,F,controle,sauvage,KRAS exon 2 seulement,15.0,1,2016-03-03
-FAKE-0345,64,M,panitumumab,sauvage,KRAS exons 2-4 (complet),6.7,1,2019-01-25
-FAKE-0346,68,F,panitumumab,muté,KRAS exons 2-4 (complet),25.8,0,2016-12-19
-FAKE-0347,68,M,controle,sauvage,KRAS exons 2-4 (complet),12.6,1,2018-09-20
-FAKE-0348,69,M,controle,sauvage,KRAS exons 2-4 (complet),24.2,1,2015-05-03
-FAKE-0349,59,M,controle,muté,test partiel (non valide),7.3,1,2017-04-06
-FAKE-0350,84,M,controle,sauvage,KRAS exons 2-4 (complet),13.9,1,2019-07-21
-FAKE-0351,65,M,controle,sauvage,KRAS exons 2-4 (complet),3.7,1,2019-08-19
-FAKE-0352,44,F,panitumumab,sauvage,KRAS exons 2-4 (complet),7.4,1,2016-01-16
-FAKE-0353,53,M,controle,muté,KRAS exon 2 seulement,18.6,1,2016-12-20
-FAKE-0354,46,M,panitumumab,sauvage,KRAS exons 2-4 (complet),25.8,0,2017-01-16
-FAKE-0355,63,F,controle,muté,KRAS exons 2-4 (complet),25.1,0,2017-10-28
-FAKE-0356,62,F,controle,sauvage,KRAS exon 2 seulement,9.1,1,2017-09-07
-FAKE-0357,58,F,panitumumab,muté,KRAS exon 2 seulement,0.3,1,2015-07-13
-FAKE-0358,83,M,controle,sauvage,test partiel (non valide),2.4,1,2018-10-23
-FAKE-0359,68,M,controle,muté,KRAS exons 2-4 (complet),2.5,1,2016-02-17
-FAKE-0360,70,M,controle,muté,KRAS exons 2-4 (complet),14.7,0,2016-07-28
-FAKE-0361,54,M,controle,sauvage,KRAS exons 2-4 (complet),4.9,1,2019-03-15
-FAKE-0362,53,M,panitumumab,muté,test partiel (non valide),4.5,1,2018-06-12
-FAKE-0363,63,M,controle,muté,KRAS exons 2-4 (complet),33.5,0,2016-12-24
-FAKE-0364,65,F,panitumumab,muté,KRAS exon 2 seulement,9.1,1,2019-07-24
-FAKE-0365,44,F,controle,sauvage,KRAS exons 2-4 (complet),5.6,1,2016-12-20
-FAKE-0366,61,F,controle,sauvage,KRAS exons 2-4 (complet),0.4,1,2017-10-29
-FAKE-0367,63,M,panitumumab,inconnu,non testé,1.6,1,2016-03-24
-FAKE-0368,61,F,controle,muté,KRAS exon 2 seulement,3.2,1,2015-12-01
-FAKE-0369,55,F,panitumumab,sauvage,KRAS exons 2-4 (complet),5.4,1,2017-06-16
-FAKE-0370,58,F,panitumumab,muté,test partiel (non valide),7.0,1,2017-10-24
-FAKE-0371,61,M,panitumumab,sauvage,KRAS exons 2-4 (complet),18.3,1,2019-01-10
-FAKE-0372,64,M,panitumumab,inconnu,non testé,4.4,1,2016-12-14
-FAKE-0373,69,M,controle,sauvage,KRAS exons 2-4 (complet),11.3,1,2019-06-22
-FAKE-0374,74,F,panitumumab,sauvage,KRAS exons 2-4 (complet),11.3,1,2018-01-13
-FAKE-0375,60,M,panitumumab,muté,KRAS exons 2-4 (complet),18.5,0,2015-05-08
-FAKE-0376,58,M,panitumumab,inconnu,non testé,12.2,1,2018-09-10
-FAKE-0377,67,M,controle,sauvage,KRAS exons 2-4 (complet),9.1,1,2017-11-15
-FAKE-0378,69,F,controle,muté,KRAS exons 2-4 (complet),6.3,1,2016-12-11
-FAKE-0379,59,F,panitumumab,muté,KRAS exons 2-4 (complet),7.7,1,2017-05-02
-FAKE-0380,71,M,controle,muté,KRAS exons 2-4 (complet),4.7,1,2016-07-04
-FAKE-0381,73,F,panitumumab,muté,KRAS exons 2-4 (complet),3.3,1,2018-01-26
-FAKE-0382,76,M,panitumumab,muté,KRAS exons 2-4 (complet),10.0,1,2017-10-31
-FAKE-0383,81,M,controle,sauvage,KRAS exons 2-4 (complet),5.3,1,2017-03-27
-FAKE-0384,54,F,controle,sauvage,KRAS exons 2-4 (complet),5.0,1,2016-06-04
-FAKE-0385,63,M,controle,muté,KRAS exons 2-4 (complet),28.3,0,2016-12-28
-FAKE-0386,63,F,controle,sauvage,KRAS exon 2 seulement,15.0,1,2017-06-27
-FAKE-0387,62,M,panitumumab,inconnu,non testé,8.1,1,2017-05-11
-FAKE-0388,57,F,panitumumab,sauvage,KRAS exon 2 seulement,22.4,1,2016-07-18
-FAKE-0389,48,F,controle,sauvage,KRAS exons 2-4 (complet),23.4,1,2017-11-28
-FAKE-0390,64,F,controle,muté,KRAS exons 2-4 (complet),,0,2016-02-18
-FAKE-0391,55,F,panitumumab,sauvage,KRAS exons 2-4 (complet),16.9,1,2017-07-03
-FAKE-0392,64,M,controle,muté,KRAS exons 2-4 (complet),0.8,1,2015-08-10
-FAKE-0393,55,F,controle,muté,KRAS exons 2-4 (complet),9.3,1,2017-05-11
-FAKE-0394,52,F,controle,inconnu,non testé,1.1,1,2018-12-01
-FAKE-0395,65,F,panitumumab,sauvage,KRAS exons 2-4 (complet),20.5,0,2019-02-01
-FAKE-0396,65,F,controle,sauvage,KRAS exons 2-4 (complet),2.0,1,2018-06-21
-FAKE-0397,69,F,panitumumab,sauvage,test partiel (non valide),1.4,1,2018-09-22
-FAKE-0398,85,M,panitumumab,sauvage,KRAS exons 2-4 (complet),39.6,0,2015-05-01
-FAKE-0399,66,M,controle,muté,KRAS exons 2-4 (complet),7.5,1,2016-09-15
-FAKE-0400,68,F,panitumumab,muté,KRAS exon 2 seulement,8.3,1,2018-04-09
+patient_id,age,sexe,traitement,kras_statut,methode_test,survie_mois,evenement,date_inclusion,echantillon_en_stock,quantite_suffisante,consentement_ok,cle_liaison_valide
+FAKE-0001,64,M,panitumumab,muté,KRAS exons 2-4 (complet),6.7,1,2017-07-10,1,1,1,1
+FAKE-0002,52,F,panitumumab,sauvage,KRAS exons 2-4 (complet),20.0,1,2019-12-04,1,1,1,1
+FAKE-0003,67,F,panitumumab,sauvage,KRAS exon 2 seulement,5.1,1,2016-03-04,1,1,1,1
+FAKE-0004,69,M,panitumumab,sauvage,KRAS exons 2-4 (complet),25.4,0,2019-09-21,1,1,1,1
+FAKE-0005,64,F,panitumumab,sauvage,KRAS exons 2-4 (complet),20.9,1,2015-07-12,1,1,1,1
+FAKE-0006,65,M,panitumumab,muté,KRAS exon 2 seulement,12.4,1,2016-02-17,1,1,1,1
+FAKE-0007,60,M,panitumumab,sauvage,KRAS exon 2 seulement,22.8,1,2016-09-09,1,1,1,1
+FAKE-0008,78,F,panitumumab,muté,KRAS exons 2-4 (complet),10.9,1,2015-03-09,1,1,1,1
+FAKE-0009,54,F,controle,muté,KRAS exons 2-4 (complet),1.1,1,2019-01-28,1,0,1,1
+FAKE-0010,57,M,controle,sauvage,test partiel (non valide),4.8,1,2019-04-11,1,1,1,1
+FAKE-0011,63,F,controle,sauvage,KRAS exons 2-4 (complet),27.2,1,2016-11-30,0,1,1,1
+FAKE-0012,72,F,panitumumab,muté,KRAS exon 2 seulement,20.2,1,2019-03-07,1,1,1,1
+FAKE-0013,48,M,controle,muté,test partiel (non valide),22.3,1,2018-11-10,1,1,1,1
+FAKE-0014,50,M,controle,muté,KRAS exon 2 seulement,25.3,0,2019-01-02,1,1,1,1
+FAKE-0015,43,M,panitumumab,muté,KRAS exons 2-4 (complet),9.7,1,2019-01-04,1,1,0,1
+FAKE-0016,63,F,panitumumab,muté,KRAS exons 2-4 (complet),9.0,1,2017-11-12,1,1,1,1
+FAKE-0017,52,F,panitumumab,sauvage,KRAS exons 2-4 (complet),14.0,1,2015-07-22,1,1,1,1
+FAKE-0018,59,F,panitumumab,muté,KRAS exons 2-4 (complet),0.8,1,2019-08-13,0,1,0,1
+FAKE-0019,70,F,controle,inconnu,non testé,9.6,1,2018-01-15,1,1,1,1
+FAKE-0020,57,F,panitumumab,inconnu,non testé,21.1,1,2019-07-03,1,1,1,1
+FAKE-0021,65,M,panitumumab,sauvage,test partiel (non valide),6.7,1,2019-10-17,1,1,1,1
+FAKE-0022,60,F,panitumumab,muté,KRAS exons 2-4 (complet),25.8,1,2015-12-08,0,1,1,1
+FAKE-0023,70,M,controle,sauvage,KRAS exons 2-4 (complet),13.1,1,2017-01-03,1,1,1,1
+FAKE-0024,68,M,controle,sauvage,KRAS exons 2-4 (complet),15.5,1,2015-12-18,0,1,1,1
+FAKE-0025,56,M,controle,sauvage,test partiel (non valide),12.2,1,2015-04-03,0,1,1,1
+FAKE-0026,61,F,controle,sauvage,KRAS exons 2-4 (complet),22.1,1,2019-10-30,1,1,1,1
+FAKE-0027,73,F,controle,sauvage,KRAS exons 2-4 (complet),8.0,1,2019-08-13,1,1,1,1
+FAKE-0028,67,M,controle,sauvage,KRAS exons 2-4 (complet),10.1,1,2019-08-28,1,1,1,0
+FAKE-0029,49,F,panitumumab,muté,KRAS exons 2-4 (complet),3.2,1,2019-06-01,1,1,1,1
+FAKE-0030,70,M,panitumumab,sauvage,KRAS exons 2-4 (complet),14.6,1,2018-03-30,1,0,1,1
+FAKE-0031,52,F,panitumumab,muté,KRAS exons 2-4 (complet),3.1,1,2017-08-10,1,1,1,1
+FAKE-0032,77,F,controle,sauvage,KRAS exons 2-4 (complet),23.4,1,2019-12-15,1,1,1,1
+FAKE-0033,73,M,controle,sauvage,KRAS exons 2-4 (complet),11.1,1,2017-10-04,1,1,1,1
+FAKE-0034,66,M,panitumumab,muté,KRAS exons 2-4 (complet),,1,2018-03-18,1,1,1,1
+FAKE-0035,65,F,panitumumab,sauvage,KRAS exons 2-4 (complet),15.7,0,2016-01-22,1,0,1,1
+FAKE-0036,61,M,controle,muté,KRAS exons 2-4 (complet),3.2,1,2018-09-24,1,1,1,1
+FAKE-0037,70,F,panitumumab,sauvage,KRAS exons 2-4 (complet),5.2,1,2019-02-04,1,1,1,1
+FAKE-0038,59,M,panitumumab,muté,KRAS exons 2-4 (complet),32.9,0,2018-05-23,1,1,1,1
+FAKE-0039,65,M,panitumumab,inconnu,non testé,14.6,1,2017-06-28,1,1,0,1
+FAKE-0040,72,M,panitumumab,muté,KRAS exons 2-4 (complet),9.8,1,2015-12-28,1,1,0,1
+FAKE-0041,57,M,controle,inconnu,non testé,0.2,1,2015-03-03,1,1,1,1
+FAKE-0042,57,F,controle,sauvage,KRAS exons 2-4 (complet),6.4,1,2018-02-18,1,1,1,1
+FAKE-0043,51,M,panitumumab,sauvage,KRAS exons 2-4 (complet),16.3,0,2018-05-31,1,1,1,1
+FAKE-0044,52,F,controle,sauvage,KRAS exons 2-4 (complet),17.5,0,2018-11-11,1,1,1,1
+FAKE-0045,45,F,panitumumab,sauvage,KRAS exons 2-4 (complet),10.3,1,2019-10-01,1,0,1,0
+FAKE-0046,70,F,controle,inconnu,non testé,13.7,1,2017-06-26,1,1,1,1
+FAKE-0047,81,F,controle,muté,KRAS exon 2 seulement,6.1,1,2019-02-22,1,1,1,1
+FAKE-0048,77,M,controle,sauvage,KRAS exons 2-4 (complet),7.8,1,2018-07-31,1,1,1,1
+FAKE-0049,47,F,controle,muté,KRAS exons 2-4 (complet),5.6,1,2016-05-20,1,1,1,1
+FAKE-0050,70,F,controle,sauvage,KRAS exons 2-4 (complet),3.2,1,2019-03-23,1,1,1,1
+FAKE-0051,77,F,panitumumab,muté,KRAS exons 2-4 (complet),9.1,1,2015-04-08,1,1,1,1
+FAKE-0052,58,M,controle,sauvage,KRAS exons 2-4 (complet),8.7,1,2017-12-28,1,1,1,1
+FAKE-0053,64,M,panitumumab,sauvage,KRAS exon 2 seulement,16.1,0,2019-09-13,1,1,1,1
+FAKE-0054,43,M,panitumumab,sauvage,KRAS exon 2 seulement,2.3,1,2018-04-17,1,1,1,1
+FAKE-0055,66,F,panitumumab,sauvage,KRAS exons 2-4 (complet),12.1,1,2019-09-07,1,1,1,1
+FAKE-0056,52,F,controle,sauvage,KRAS exons 2-4 (complet),15.6,0,2015-04-13,1,1,1,1
+FAKE-0057,65,M,controle,sauvage,KRAS exons 2-4 (complet),9.4,1,2017-08-29,1,1,1,1
+FAKE-0058,47,M,controle,sauvage,KRAS exons 2-4 (complet),31.7,0,2018-11-25,1,1,1,1
+FAKE-0059,68,M,panitumumab,sauvage,KRAS exons 2-4 (complet),9.8,1,2018-03-18,1,1,1,1
+FAKE-0060,73,M,panitumumab,inconnu,non testé,,1,2019-05-26,1,1,1,1
+FAKE-0061,55,M,panitumumab,muté,KRAS exons 2-4 (complet),24.8,1,2017-04-24,1,1,1,1
+FAKE-0062,52,M,controle,muté,KRAS exons 2-4 (complet),0.9,1,2018-05-30,1,1,1,1
+FAKE-0063,41,F,controle,muté,test partiel (non valide),7.2,1,2017-02-05,1,1,1,1
+FAKE-0064,60,F,panitumumab,sauvage,KRAS exons 2-4 (complet),8.4,1,2019-05-11,1,1,1,1
+FAKE-0065,57,F,controle,sauvage,KRAS exons 2-4 (complet),12.0,1,2015-08-06,1,1,1,1
+FAKE-0066,47,F,panitumumab,sauvage,KRAS exon 2 seulement,18.7,0,2016-04-08,1,1,1,1
+FAKE-0067,68,F,panitumumab,sauvage,KRAS exons 2-4 (complet),,1,2015-06-26,1,1,1,1
+FAKE-0068,59,M,panitumumab,muté,KRAS exons 2-4 (complet),,0,2018-07-05,1,1,1,1
+FAKE-0069,52,F,controle,sauvage,KRAS exons 2-4 (complet),0.6,1,2016-02-29,1,1,1,1
+FAKE-0070,57,F,panitumumab,sauvage,test partiel (non valide),7.9,1,2016-08-01,1,1,1,1
+FAKE-0071,74,F,panitumumab,muté,KRAS exons 2-4 (complet),10.1,1,2019-03-07,1,1,1,1
+FAKE-0072,69,F,controle,muté,KRAS exons 2-4 (complet),6.2,1,2016-10-19,1,1,1,1
+FAKE-0073,62,F,panitumumab,muté,KRAS exons 2-4 (complet),1.8,1,2015-09-24,1,1,1,1
+FAKE-0074,69,F,controle,muté,KRAS exons 2-4 (complet),3.0,1,2015-02-08,1,1,1,1
+FAKE-0075,51,M,panitumumab,muté,KRAS exons 2-4 (complet),5.8,1,2016-02-18,1,1,1,1
+FAKE-0076,63,M,panitumumab,inconnu,non testé,6.7,1,2019-07-28,1,1,1,1
+FAKE-0077,64,F,panitumumab,sauvage,KRAS exons 2-4 (complet),20.5,0,2017-09-28,1,1,1,1
+FAKE-0078,58,M,panitumumab,muté,KRAS exons 2-4 (complet),13.7,1,2019-12-21,1,1,1,1
+FAKE-0079,67,M,controle,sauvage,KRAS exons 2-4 (complet),14.5,1,2016-01-28,1,1,1,1
+FAKE-0080,55,M,panitumumab,sauvage,KRAS exon 2 seulement,19.6,1,2016-10-03,1,1,1,1
+FAKE-0081,68,F,controle,inconnu,non testé,18.1,1,2015-10-25,1,1,1,1
+FAKE-0082,69,M,panitumumab,sauvage,KRAS exons 2-4 (complet),25.9,0,2016-12-28,1,1,1,1
+FAKE-0083,34,F,panitumumab,sauvage,KRAS exon 2 seulement,7.1,1,2017-10-25,1,1,1,1
+FAKE-0084,75,F,controle,muté,KRAS exons 2-4 (complet),28.0,1,2019-01-14,1,1,1,1
+FAKE-0085,33,F,controle,inconnu,non testé,0.2,1,2016-11-02,1,1,1,1
+FAKE-0086,57,M,panitumumab,sauvage,KRAS exons 2-4 (complet),29.2,0,2018-11-09,1,1,1,1
+FAKE-0087,73,F,controle,inconnu,non testé,1.4,1,2018-02-16,1,1,1,0
+FAKE-0088,60,F,controle,muté,KRAS exon 2 seulement,1.5,1,2016-06-16,1,1,1,1
+FAKE-0089,48,F,panitumumab,sauvage,KRAS exon 2 seulement,11.5,1,2019-07-23,1,1,1,1
+FAKE-0090,52,F,panitumumab,sauvage,KRAS exons 2-4 (complet),3.4,1,2017-03-03,1,1,1,1
+FAKE-0091,73,M,panitumumab,muté,test partiel (non valide),0.1,1,2015-10-03,0,1,1,0
+FAKE-0092,44,F,panitumumab,sauvage,KRAS exons 2-4 (complet),0.0,1,2019-10-23,1,1,1,1
+FAKE-0093,74,F,panitumumab,sauvage,KRAS exons 2-4 (complet),6.8,1,2019-07-26,1,1,1,0
+FAKE-0094,62,F,panitumumab,muté,test partiel (non valide),,1,2015-04-01,1,1,1,1
+FAKE-0095,51,F,controle,sauvage,KRAS exons 2-4 (complet),1.7,1,2019-07-06,1,1,1,1
+FAKE-0096,57,F,controle,sauvage,KRAS exon 2 seulement,11.9,1,2019-09-25,0,1,1,1
+FAKE-0097,53,M,panitumumab,muté,KRAS exons 2-4 (complet),19.9,1,2019-02-22,1,1,1,1
+FAKE-0098,72,F,panitumumab,sauvage,KRAS exon 2 seulement,4.4,1,2016-04-10,1,1,1,1
+FAKE-0099,70,F,panitumumab,sauvage,KRAS exons 2-4 (complet),6.9,1,2018-02-26,1,1,1,1
+FAKE-0100,46,M,panitumumab,muté,KRAS exons 2-4 (complet),18.3,0,2017-09-09,1,1,1,1
+FAKE-0101,59,M,panitumumab,inconnu,non testé,19.1,1,2018-02-05,1,1,0,1
+FAKE-0102,54,F,panitumumab,sauvage,KRAS exons 2-4 (complet),,1,2018-01-30,0,1,1,1
+FAKE-0103,76,F,controle,muté,KRAS exons 2-4 (complet),24.2,1,2018-03-12,0,1,1,1
+FAKE-0104,49,F,controle,inconnu,non testé,1.4,1,2017-07-27,1,1,1,1
+FAKE-0105,79,M,controle,sauvage,KRAS exons 2-4 (complet),,1,2018-06-14,1,1,1,1
+FAKE-0106,63,F,controle,muté,KRAS exons 2-4 (complet),17.7,1,2017-08-19,1,1,1,1
+FAKE-0107,51,F,panitumumab,sauvage,KRAS exons 2-4 (complet),9.1,1,2015-01-31,1,1,1,1
+FAKE-0108,56,M,controle,muté,KRAS exons 2-4 (complet),4.7,1,2015-03-06,1,1,1,1
+FAKE-0109,55,F,controle,inconnu,non testé,10.7,1,2019-10-15,0,0,1,0
+FAKE-0110,50,F,controle,sauvage,KRAS exons 2-4 (complet),18.9,1,2019-07-18,1,1,1,1
+FAKE-0111,64,M,panitumumab,sauvage,KRAS exon 2 seulement,,0,2017-12-04,1,1,1,1
+FAKE-0112,51,F,controle,muté,KRAS exon 2 seulement,27.6,0,2015-11-15,1,1,1,0
+FAKE-0113,41,M,controle,sauvage,KRAS exon 2 seulement,2.6,1,2018-11-27,1,1,1,1
+FAKE-0114,59,M,controle,muté,KRAS exons 2-4 (complet),3.6,1,2015-09-19,1,1,1,1
+FAKE-0115,45,F,controle,muté,KRAS exon 2 seulement,17.5,0,2016-11-19,1,1,1,1
+FAKE-0116,55,M,controle,muté,KRAS exons 2-4 (complet),2.6,1,2016-08-24,1,1,1,1
+FAKE-0117,54,M,panitumumab,sauvage,KRAS exons 2-4 (complet),0.2,1,2015-01-23,1,1,1,1
+FAKE-0118,54,M,controle,muté,KRAS exons 2-4 (complet),3.1,1,2019-01-12,1,0,1,1
+FAKE-0119,83,F,panitumumab,inconnu,non testé,5.7,1,2017-07-19,1,1,1,1
+FAKE-0120,64,F,panitumumab,sauvage,KRAS exons 2-4 (complet),7.4,1,2016-07-31,0,1,1,1
+FAKE-0121,65,F,panitumumab,muté,KRAS exons 2-4 (complet),13.0,1,2017-07-14,1,1,1,1
+FAKE-0122,45,M,controle,muté,KRAS exons 2-4 (complet),13.2,1,2015-01-01,1,1,1,1
+FAKE-0123,56,F,panitumumab,muté,test partiel (non valide),6.8,1,2017-03-08,1,1,1,1
+FAKE-0124,65,M,panitumumab,sauvage,KRAS exons 2-4 (complet),19.4,0,2017-08-06,1,1,1,1
+FAKE-0125,53,M,panitumumab,sauvage,KRAS exons 2-4 (complet),13.6,1,2016-09-11,1,1,1,1
+FAKE-0126,72,M,panitumumab,muté,test partiel (non valide),12.1,1,2019-02-24,1,1,1,1
+FAKE-0127,51,F,panitumumab,sauvage,KRAS exons 2-4 (complet),31.0,0,2016-03-31,1,1,1,1
+FAKE-0128,60,F,controle,muté,KRAS exons 2-4 (complet),18.4,1,2015-09-09,1,1,1,0
+FAKE-0129,57,M,controle,sauvage,KRAS exon 2 seulement,4.1,1,2017-08-20,1,1,1,1
+FAKE-0130,65,F,controle,inconnu,non testé,2.2,1,2019-06-08,0,1,1,0
+FAKE-0131,57,F,panitumumab,sauvage,KRAS exon 2 seulement,39.0,0,2016-11-15,0,1,1,1
+FAKE-0132,60,M,controle,sauvage,KRAS exons 2-4 (complet),14.0,1,2015-03-27,1,1,1,1
+FAKE-0133,61,M,controle,sauvage,KRAS exons 2-4 (complet),23.2,1,2019-11-06,1,1,1,1
+FAKE-0134,56,M,controle,muté,KRAS exons 2-4 (complet),11.3,1,2017-03-21,1,1,1,1
+FAKE-0135,68,M,controle,muté,KRAS exons 2-4 (complet),11.3,1,2015-11-12,1,1,1,1
+FAKE-0136,65,F,controle,muté,KRAS exons 2-4 (complet),33.7,0,2018-01-28,1,1,1,1
+FAKE-0137,62,F,controle,sauvage,KRAS exons 2-4 (complet),32.2,1,2016-08-06,1,1,1,1
+FAKE-0138,59,F,controle,sauvage,KRAS exons 2-4 (complet),0.9,1,2019-09-08,1,1,1,1
+FAKE-0139,71,F,controle,sauvage,KRAS exon 2 seulement,2.5,1,2016-06-20,1,1,1,1
+FAKE-0140,61,M,controle,sauvage,KRAS exons 2-4 (complet),5.8,1,2017-09-30,1,1,1,1
+FAKE-0141,60,F,controle,muté,KRAS exons 2-4 (complet),5.5,1,2017-09-18,1,0,1,1
+FAKE-0142,64,M,controle,sauvage,KRAS exons 2-4 (complet),,1,2016-03-18,1,1,1,1
+FAKE-0143,80,M,panitumumab,muté,KRAS exon 2 seulement,12.8,1,2017-06-30,1,1,1,1
+FAKE-0144,50,M,panitumumab,muté,KRAS exons 2-4 (complet),6.4,1,2015-07-19,1,1,1,1
+FAKE-0145,71,F,controle,sauvage,KRAS exons 2-4 (complet),17.8,0,2018-03-20,0,1,1,1
+FAKE-0146,44,F,controle,inconnu,non testé,5.7,1,2018-10-15,1,1,1,1
+FAKE-0147,65,M,panitumumab,sauvage,KRAS exons 2-4 (complet),15.1,1,2019-09-30,0,1,1,1
+FAKE-0148,79,M,controle,muté,KRAS exons 2-4 (complet),7.1,1,2016-08-17,1,1,1,1
+FAKE-0149,68,F,panitumumab,sauvage,KRAS exons 2-4 (complet),21.5,1,2016-06-04,1,1,1,1
+FAKE-0150,65,F,panitumumab,muté,KRAS exon 2 seulement,3.3,1,2017-09-28,1,1,1,1
+FAKE-0151,57,M,panitumumab,sauvage,KRAS exons 2-4 (complet),22.4,0,2018-06-18,1,1,1,1
+FAKE-0152,63,M,controle,sauvage,KRAS exon 2 seulement,17.3,0,2019-12-17,1,1,1,1
+FAKE-0153,60,F,panitumumab,muté,test partiel (non valide),0.8,1,2015-02-15,1,1,1,1
+FAKE-0154,55,F,panitumumab,muté,KRAS exons 2-4 (complet),0.1,1,2016-03-10,1,1,1,1
+FAKE-0155,60,M,panitumumab,muté,KRAS exons 2-4 (complet),6.1,1,2016-04-23,1,1,1,1
+FAKE-0156,65,M,panitumumab,inconnu,non testé,12.3,1,2016-04-11,1,1,1,1
+FAKE-0157,55,M,panitumumab,sauvage,KRAS exons 2-4 (complet),26.2,1,2017-04-26,1,0,1,1
+FAKE-0158,55,F,controle,sauvage,KRAS exon 2 seulement,6.9,1,2019-05-13,1,1,1,1
+FAKE-0159,49,F,controle,sauvage,KRAS exons 2-4 (complet),8.1,1,2015-02-26,1,1,1,1
+FAKE-0160,67,M,panitumumab,sauvage,KRAS exons 2-4 (complet),18.8,1,2019-01-28,1,1,1,1
+FAKE-0161,68,M,controle,muté,KRAS exons 2-4 (complet),6.5,1,2018-02-01,1,1,0,1
+FAKE-0162,65,M,controle,inconnu,non testé,37.9,0,2018-01-27,0,1,1,1
+FAKE-0163,73,F,controle,muté,KRAS exon 2 seulement,0.9,1,2018-05-22,0,1,1,1
+FAKE-0164,64,F,panitumumab,sauvage,KRAS exons 2-4 (complet),2.4,1,2015-07-30,1,1,1,1
+FAKE-0165,67,F,controle,sauvage,KRAS exons 2-4 (complet),9.7,1,2018-09-24,1,1,1,1
+FAKE-0166,66,F,panitumumab,sauvage,KRAS exons 2-4 (complet),6.3,1,2016-03-28,1,1,1,1
+FAKE-0167,62,M,panitumumab,inconnu,non testé,25.1,0,2017-07-31,1,1,1,1
+FAKE-0168,58,F,controle,muté,test partiel (non valide),5.5,1,2018-05-20,1,1,1,1
+FAKE-0169,85,M,panitumumab,sauvage,KRAS exons 2-4 (complet),4.6,1,2018-01-07,1,1,1,1
+FAKE-0170,58,M,panitumumab,sauvage,KRAS exons 2-4 (complet),3.6,1,2016-08-12,1,1,1,1
+FAKE-0171,56,M,panitumumab,sauvage,KRAS exon 2 seulement,19.5,1,2016-12-23,1,1,1,1
+FAKE-0172,67,M,panitumumab,muté,test partiel (non valide),2.1,1,2017-05-19,1,1,1,1
+FAKE-0173,66,F,panitumumab,muté,KRAS exons 2-4 (complet),6.5,1,2015-03-17,1,1,1,1
+FAKE-0174,49,M,panitumumab,muté,KRAS exons 2-4 (complet),13.2,1,2018-08-18,0,1,1,1
+FAKE-0175,74,F,panitumumab,muté,KRAS exon 2 seulement,14.9,1,2015-07-02,1,1,1,1
+FAKE-0176,62,F,controle,sauvage,KRAS exon 2 seulement,6.2,1,2017-04-16,1,1,1,1
+FAKE-0177,52,F,panitumumab,sauvage,KRAS exons 2-4 (complet),1.0,1,2018-04-10,1,1,1,1
+FAKE-0178,75,F,controle,sauvage,KRAS exons 2-4 (complet),5.9,1,2015-05-27,1,1,1,1
+FAKE-0179,69,M,controle,sauvage,KRAS exon 2 seulement,7.1,1,2019-12-22,1,1,1,1
+FAKE-0180,50,F,controle,sauvage,KRAS exon 2 seulement,8.0,1,2016-11-19,1,1,1,1
+FAKE-0181,81,F,panitumumab,muté,KRAS exon 2 seulement,3.2,1,2015-01-29,1,1,1,1
+FAKE-0182,70,F,panitumumab,sauvage,KRAS exons 2-4 (complet),35.7,0,2018-04-17,1,1,1,1
+FAKE-0183,63,F,controle,muté,KRAS exons 2-4 (complet),18.0,1,2017-10-14,1,1,1,1
+FAKE-0184,79,M,controle,muté,test partiel (non valide),1.2,1,2018-03-14,1,1,1,0
+FAKE-0185,65,F,controle,sauvage,KRAS exon 2 seulement,1.1,1,2018-10-02,1,1,1,1
+FAKE-0186,63,M,controle,sauvage,KRAS exon 2 seulement,7.8,1,2017-05-18,1,0,1,1
+FAKE-0187,56,F,panitumumab,muté,KRAS exons 2-4 (complet),18.5,1,2019-02-17,1,1,1,1
+FAKE-0188,69,M,panitumumab,sauvage,KRAS exons 2-4 (complet),1.8,1,2016-11-06,1,1,1,1
+FAKE-0189,68,F,panitumumab,sauvage,KRAS exon 2 seulement,32.6,1,2017-09-21,1,1,1,1
+FAKE-0190,63,F,panitumumab,sauvage,KRAS exons 2-4 (complet),21.6,1,2015-10-17,1,1,1,1
+FAKE-0191,55,F,panitumumab,sauvage,test partiel (non valide),33.7,1,2018-02-05,1,1,1,1
+FAKE-0192,64,M,panitumumab,sauvage,KRAS exons 2-4 (complet),18.4,0,2016-04-22,1,1,0,1
+FAKE-0193,62,M,controle,muté,KRAS exon 2 seulement,13.4,0,2018-06-25,0,1,1,1
+FAKE-0194,50,F,panitumumab,sauvage,KRAS exon 2 seulement,,1,2019-01-01,1,1,1,1
+FAKE-0195,48,M,controle,sauvage,KRAS exons 2-4 (complet),20.6,0,2019-04-17,1,1,1,1
+FAKE-0196,69,M,controle,sauvage,KRAS exons 2-4 (complet),13.0,1,2019-08-23,0,1,0,1
+FAKE-0197,37,F,controle,sauvage,KRAS exons 2-4 (complet),11.1,1,2015-08-12,1,1,1,1
+FAKE-0198,65,F,controle,muté,KRAS exons 2-4 (complet),9.7,1,2015-09-09,1,1,1,1
+FAKE-0199,58,M,panitumumab,sauvage,KRAS exons 2-4 (complet),28.3,1,2019-08-18,1,1,1,1
+FAKE-0200,76,M,panitumumab,sauvage,KRAS exons 2-4 (complet),7.0,1,2016-11-26,1,1,1,1
+FAKE-0201,58,M,panitumumab,sauvage,test partiel (non valide),32.4,0,2015-02-17,1,1,1,1
+FAKE-0202,70,F,panitumumab,inconnu,non testé,24.4,0,2016-06-07,1,1,1,1
+FAKE-0203,59,F,panitumumab,sauvage,KRAS exons 2-4 (complet),3.6,1,2019-03-07,1,1,1,1
+FAKE-0204,64,F,controle,sauvage,KRAS exons 2-4 (complet),,1,2016-10-09,1,1,1,1
+FAKE-0205,70,F,controle,sauvage,KRAS exons 2-4 (complet),17.1,1,2015-05-21,1,1,1,1
+FAKE-0206,58,M,controle,muté,KRAS exons 2-4 (complet),1.7,1,2018-08-10,1,1,1,1
+FAKE-0207,73,F,panitumumab,sauvage,KRAS exons 2-4 (complet),11.3,1,2015-12-22,1,1,1,1
+FAKE-0208,53,F,panitumumab,sauvage,KRAS exons 2-4 (complet),6.9,1,2016-10-05,1,1,1,1
+FAKE-0209,66,F,panitumumab,muté,KRAS exons 2-4 (complet),2.3,1,2015-01-08,1,1,1,1
+FAKE-0210,72,F,panitumumab,muté,KRAS exons 2-4 (complet),3.4,1,2018-01-03,1,1,1,1
+FAKE-0211,70,M,controle,sauvage,test partiel (non valide),17.8,1,2017-03-23,1,1,1,1
+FAKE-0212,82,F,panitumumab,muté,KRAS exons 2-4 (complet),8.1,1,2019-05-02,1,1,1,1
+FAKE-0213,55,M,controle,muté,KRAS exons 2-4 (complet),4.5,1,2016-09-02,1,1,1,1
+FAKE-0214,49,F,panitumumab,muté,KRAS exon 2 seulement,2.7,1,2016-01-09,0,1,1,1
+FAKE-0215,53,F,controle,muté,KRAS exon 2 seulement,23.4,1,2015-10-30,1,1,1,1
+FAKE-0216,70,F,panitumumab,muté,KRAS exons 2-4 (complet),7.1,1,2016-01-01,1,1,1,1
+FAKE-0217,68,M,panitumumab,sauvage,KRAS exons 2-4 (complet),18.9,0,2017-04-03,1,1,1,1
+FAKE-0218,64,F,controle,muté,KRAS exons 2-4 (complet),7.2,1,2015-06-09,1,1,1,1
+FAKE-0219,52,F,controle,sauvage,KRAS exons 2-4 (complet),3.9,1,2017-01-04,1,1,1,1
+FAKE-0220,71,M,panitumumab,sauvage,KRAS exons 2-4 (complet),26.6,0,2019-04-09,1,1,1,1
+FAKE-0221,51,M,panitumumab,muté,KRAS exons 2-4 (complet),8.3,1,2018-11-01,1,1,1,1
+FAKE-0222,75,F,controle,muté,KRAS exons 2-4 (complet),13.4,1,2018-03-08,1,1,1,1
+FAKE-0223,90,M,controle,sauvage,KRAS exons 2-4 (complet),,1,2019-06-18,1,0,1,1
+FAKE-0224,67,M,panitumumab,muté,test partiel (non valide),29.7,1,2018-11-24,1,1,1,1
+FAKE-0225,69,F,controle,muté,KRAS exons 2-4 (complet),16.6,1,2018-04-05,1,1,1,1
+FAKE-0226,58,M,panitumumab,inconnu,non testé,,1,2019-04-25,1,1,1,0
+FAKE-0227,45,F,controle,inconnu,non testé,20.7,1,2015-08-16,1,0,1,1
+FAKE-0228,57,F,panitumumab,sauvage,KRAS exons 2-4 (complet),6.5,1,2019-02-02,1,1,1,1
+FAKE-0229,52,M,panitumumab,muté,KRAS exons 2-4 (complet),4.5,1,2016-06-23,1,1,1,1
+FAKE-0230,49,F,panitumumab,sauvage,KRAS exons 2-4 (complet),26.5,1,2018-08-30,1,1,1,1
+FAKE-0231,80,M,panitumumab,sauvage,KRAS exons 2-4 (complet),7.8,1,2019-07-25,1,1,0,1
+FAKE-0232,66,M,controle,muté,KRAS exon 2 seulement,4.9,1,2017-06-24,1,1,1,1
+FAKE-0233,67,F,panitumumab,sauvage,KRAS exon 2 seulement,36.5,0,2015-06-11,1,1,1,1
+FAKE-0234,60,F,panitumumab,muté,test partiel (non valide),19.5,1,2016-11-06,1,1,1,1
+FAKE-0235,61,F,controle,muté,test partiel (non valide),5.2,1,2017-01-12,1,1,1,1
+FAKE-0236,73,M,panitumumab,sauvage,test partiel (non valide),12.2,1,2019-09-06,1,1,1,1
+FAKE-0237,63,F,controle,muté,test partiel (non valide),22.6,1,2019-09-17,1,1,1,1
+FAKE-0238,68,F,panitumumab,muté,KRAS exons 2-4 (complet),1.1,1,2017-11-03,1,1,1,1
+FAKE-0239,61,M,controle,sauvage,KRAS exons 2-4 (complet),16.6,1,2019-10-01,1,1,1,1
+FAKE-0240,60,M,controle,inconnu,non testé,2.4,1,2017-03-07,1,0,1,1
+FAKE-0241,49,M,panitumumab,sauvage,KRAS exons 2-4 (complet),21.4,0,2017-01-20,1,1,1,1
+FAKE-0242,43,F,controle,sauvage,KRAS exons 2-4 (complet),8.3,1,2019-03-07,0,1,1,1
+FAKE-0243,60,M,controle,inconnu,non testé,2.3,1,2018-05-02,1,1,1,1
+FAKE-0244,64,M,controle,muté,KRAS exons 2-4 (complet),0.0,1,2017-08-11,1,1,1,1
+FAKE-0245,50,M,panitumumab,sauvage,KRAS exon 2 seulement,0.7,1,2017-04-13,1,1,1,1
+FAKE-0246,63,F,panitumumab,muté,KRAS exons 2-4 (complet),4.6,1,2018-07-11,1,1,1,1
+FAKE-0247,64,M,controle,muté,KRAS exons 2-4 (complet),20.0,1,2018-10-07,1,1,1,1
+FAKE-0248,41,F,controle,sauvage,KRAS exons 2-4 (complet),0.5,1,2017-06-14,1,1,1,1
+FAKE-0249,54,M,panitumumab,sauvage,KRAS exons 2-4 (complet),25.9,0,2015-02-27,1,1,1,1
+FAKE-0250,67,F,controle,sauvage,KRAS exons 2-4 (complet),13.5,0,2015-07-05,1,1,1,1
+FAKE-0251,67,F,controle,muté,KRAS exon 2 seulement,5.6,1,2015-09-21,1,1,1,1
+FAKE-0252,51,M,controle,muté,KRAS exons 2-4 (complet),17.4,1,2017-04-23,1,1,1,1
+FAKE-0253,65,M,panitumumab,inconnu,non testé,0.3,1,2018-01-25,1,1,1,1
+FAKE-0254,73,M,controle,muté,KRAS exon 2 seulement,1.7,1,2019-01-06,1,1,1,1
+FAKE-0255,71,F,controle,muté,KRAS exons 2-4 (complet),3.7,1,2016-02-29,1,1,1,1
+FAKE-0256,62,M,panitumumab,muté,KRAS exons 2-4 (complet),6.4,1,2018-12-06,1,1,1,1
+FAKE-0257,58,F,panitumumab,sauvage,KRAS exons 2-4 (complet),25.0,1,2018-04-30,1,1,1,1
+FAKE-0258,57,M,controle,sauvage,KRAS exon 2 seulement,19.2,0,2015-04-05,1,1,0,1
+FAKE-0259,68,M,controle,sauvage,KRAS exon 2 seulement,,1,2016-10-02,1,1,1,1
+FAKE-0260,65,M,panitumumab,muté,KRAS exons 2-4 (complet),8.3,1,2016-07-06,1,1,1,1
+FAKE-0261,69,M,panitumumab,muté,test partiel (non valide),36.8,0,2019-06-07,1,1,1,1
+FAKE-0262,64,M,panitumumab,sauvage,KRAS exons 2-4 (complet),16.0,1,2019-08-09,1,1,1,1
+FAKE-0263,71,M,panitumumab,sauvage,KRAS exon 2 seulement,10.8,1,2019-02-04,1,1,1,1
+FAKE-0264,64,F,controle,sauvage,KRAS exons 2-4 (complet),22.4,1,2017-08-21,1,1,0,1
+FAKE-0265,71,F,controle,sauvage,KRAS exons 2-4 (complet),18.9,0,2017-06-18,0,1,1,1
+FAKE-0266,72,F,controle,sauvage,KRAS exon 2 seulement,,1,2016-07-22,1,1,1,1
+FAKE-0267,55,M,panitumumab,muté,KRAS exons 2-4 (complet),12.7,1,2018-11-11,1,1,1,1
+FAKE-0268,45,M,controle,muté,KRAS exons 2-4 (complet),32.0,1,2015-06-07,1,1,1,1
+FAKE-0269,78,F,panitumumab,sauvage,KRAS exons 2-4 (complet),9.0,1,2016-05-09,1,1,1,1
+FAKE-0270,66,F,controle,muté,KRAS exons 2-4 (complet),7.6,1,2015-09-04,1,1,1,1
+FAKE-0271,46,F,controle,sauvage,KRAS exon 2 seulement,10.1,1,2017-06-21,0,1,1,1
+FAKE-0272,56,F,panitumumab,sauvage,KRAS exon 2 seulement,17.3,1,2016-07-01,1,1,0,1
+FAKE-0273,71,F,controle,sauvage,KRAS exon 2 seulement,17.4,1,2015-12-27,1,1,1,1
+FAKE-0274,60,M,panitumumab,sauvage,KRAS exons 2-4 (complet),24.2,1,2016-11-17,0,1,1,1
+FAKE-0275,58,M,panitumumab,sauvage,KRAS exons 2-4 (complet),11.0,1,2019-04-21,1,1,1,1
+FAKE-0276,77,F,panitumumab,inconnu,non testé,17.6,0,2017-10-15,1,1,1,1
+FAKE-0277,53,F,panitumumab,sauvage,KRAS exons 2-4 (complet),11.5,1,2019-02-11,1,1,1,1
+FAKE-0278,55,M,controle,sauvage,KRAS exons 2-4 (complet),3.5,1,2019-07-26,1,1,1,1
+FAKE-0279,65,M,panitumumab,muté,KRAS exons 2-4 (complet),11.3,1,2019-07-05,1,1,1,1
+FAKE-0280,67,M,controle,sauvage,test partiel (non valide),23.8,1,2016-10-02,1,1,1,1
+FAKE-0281,68,F,panitumumab,sauvage,KRAS exon 2 seulement,6.3,1,2019-05-21,1,1,1,1
+FAKE-0282,72,F,controle,muté,KRAS exon 2 seulement,11.6,1,2019-07-18,1,1,1,1
+FAKE-0283,65,F,panitumumab,muté,KRAS exons 2-4 (complet),4.6,1,2019-10-18,1,0,1,1
+FAKE-0284,68,M,panitumumab,inconnu,non testé,0.5,1,2016-10-02,1,1,1,1
+FAKE-0285,60,M,panitumumab,sauvage,KRAS exons 2-4 (complet),5.6,1,2016-02-21,1,1,1,1
+FAKE-0286,64,M,panitumumab,muté,KRAS exons 2-4 (complet),13.5,1,2017-12-02,1,0,1,1
+FAKE-0287,64,F,controle,muté,KRAS exons 2-4 (complet),17.9,0,2019-08-28,1,1,1,1
+FAKE-0288,65,F,controle,muté,KRAS exons 2-4 (complet),3.4,1,2019-07-02,1,1,1,1
+FAKE-0289,71,M,panitumumab,muté,KRAS exons 2-4 (complet),11.5,1,2017-11-08,1,1,1,1
+FAKE-0290,69,M,controle,inconnu,non testé,,1,2015-09-30,1,1,1,1
+FAKE-0291,63,M,controle,sauvage,KRAS exons 2-4 (complet),12.1,1,2017-02-10,1,1,1,1
+FAKE-0292,55,F,panitumumab,muté,test partiel (non valide),0.4,1,2018-07-27,1,1,1,1
+FAKE-0293,64,F,panitumumab,sauvage,KRAS exons 2-4 (complet),,1,2017-10-19,1,1,1,1
+FAKE-0294,63,F,controle,muté,test partiel (non valide),2.8,1,2016-09-22,1,1,1,1
+FAKE-0295,65,M,controle,muté,KRAS exons 2-4 (complet),4.4,1,2016-09-17,1,1,1,1
+FAKE-0296,85,M,controle,sauvage,KRAS exons 2-4 (complet),7.1,1,2015-04-20,1,1,1,1
+FAKE-0297,58,M,panitumumab,sauvage,KRAS exons 2-4 (complet),11.5,1,2016-06-10,1,1,1,1
+FAKE-0298,67,F,panitumumab,inconnu,non testé,8.9,1,2018-05-06,1,1,1,0
+FAKE-0299,74,M,panitumumab,sauvage,KRAS exons 2-4 (complet),2.8,1,2016-03-16,1,1,1,1
+FAKE-0300,64,F,panitumumab,sauvage,KRAS exons 2-4 (complet),26.6,0,2019-12-18,1,1,1,1
+FAKE-0301,86,M,controle,sauvage,KRAS exons 2-4 (complet),5.4,1,2015-05-31,1,1,1,1
+FAKE-0302,59,M,controle,inconnu,non testé,10.4,1,2017-12-10,1,1,1,1
+FAKE-0303,66,M,controle,sauvage,test partiel (non valide),21.7,0,2017-06-25,0,1,1,1
+FAKE-0304,55,M,panitumumab,inconnu,non testé,2.2,1,2019-03-01,1,1,0,1
+FAKE-0305,59,M,controle,sauvage,KRAS exons 2-4 (complet),10.9,1,2019-06-09,1,1,1,1
+FAKE-0306,65,F,panitumumab,sauvage,KRAS exons 2-4 (complet),,1,2017-09-18,1,1,1,0
+FAKE-0307,71,F,controle,muté,KRAS exons 2-4 (complet),19.3,0,2018-02-24,1,1,1,1
+FAKE-0308,66,M,panitumumab,sauvage,KRAS exons 2-4 (complet),13.3,1,2018-06-29,1,1,1,1
+FAKE-0309,76,M,controle,sauvage,KRAS exons 2-4 (complet),5.6,1,2017-08-08,1,1,1,1
+FAKE-0310,62,F,controle,sauvage,KRAS exons 2-4 (complet),0.2,1,2015-12-04,1,1,1,1
+FAKE-0311,60,M,panitumumab,sauvage,test partiel (non valide),21.2,0,2017-02-21,1,1,1,1
+FAKE-0312,90,F,controle,inconnu,non testé,1.5,1,2016-03-16,1,0,1,1
+FAKE-0313,67,M,panitumumab,inconnu,non testé,15.5,1,2017-04-27,0,1,1,1
+FAKE-0314,56,F,controle,muté,KRAS exon 2 seulement,4.8,1,2018-01-27,1,1,1,1
+FAKE-0315,56,M,panitumumab,sauvage,KRAS exon 2 seulement,33.4,0,2016-01-17,1,0,1,1
+FAKE-0316,54,F,controle,sauvage,KRAS exons 2-4 (complet),2.2,1,2016-03-31,1,1,1,1
+FAKE-0317,72,F,controle,muté,KRAS exons 2-4 (complet),18.1,0,2019-02-10,1,1,1,1
+FAKE-0318,59,M,controle,muté,test partiel (non valide),31.3,0,2016-11-20,1,1,1,1
+FAKE-0319,64,M,controle,muté,KRAS exons 2-4 (complet),4.1,1,2015-12-29,1,1,1,1
+FAKE-0320,62,F,controle,sauvage,KRAS exons 2-4 (complet),1.4,1,2018-07-25,1,1,1,1
+FAKE-0321,70,M,controle,sauvage,KRAS exons 2-4 (complet),13.8,1,2018-07-31,1,1,1,1
+FAKE-0322,55,F,controle,inconnu,non testé,4.0,1,2019-02-16,1,1,1,1
+FAKE-0323,52,F,panitumumab,sauvage,KRAS exon 2 seulement,7.9,1,2018-10-18,1,1,1,1
+FAKE-0324,65,F,controle,inconnu,non testé,17.6,1,2019-12-16,1,1,1,1
+FAKE-0325,69,F,controle,sauvage,KRAS exons 2-4 (complet),27.5,1,2017-11-15,1,1,0,1
+FAKE-0326,66,M,panitumumab,sauvage,KRAS exon 2 seulement,18.8,1,2016-06-07,1,1,1,1
+FAKE-0327,55,M,controle,muté,KRAS exon 2 seulement,,0,2019-04-24,1,1,1,1
+FAKE-0328,70,F,controle,sauvage,KRAS exons 2-4 (complet),1.6,1,2016-04-28,1,1,1,1
+FAKE-0329,56,F,panitumumab,sauvage,test partiel (non valide),30.9,0,2016-06-15,1,0,1,1
+FAKE-0330,58,M,panitumumab,inconnu,non testé,2.2,1,2019-02-21,1,1,1,1
+FAKE-0331,54,M,panitumumab,sauvage,KRAS exons 2-4 (complet),2.4,1,2019-05-28,1,1,1,1
+FAKE-0332,76,F,controle,muté,KRAS exons 2-4 (complet),4.0,1,2016-09-11,1,0,1,1
+FAKE-0333,69,F,controle,muté,KRAS exons 2-4 (complet),9.7,1,2018-08-24,1,1,1,1
+FAKE-0334,69,F,controle,muté,test partiel (non valide),2.4,1,2019-08-11,1,0,1,1
+FAKE-0335,75,F,controle,muté,KRAS exons 2-4 (complet),18.2,0,2018-12-28,1,1,1,1
+FAKE-0336,90,M,controle,sauvage,KRAS exons 2-4 (complet),3.3,1,2015-01-10,1,1,1,1
+FAKE-0337,46,M,panitumumab,sauvage,KRAS exons 2-4 (complet),32.8,0,2018-04-27,1,1,1,1
+FAKE-0338,56,M,panitumumab,sauvage,KRAS exons 2-4 (complet),18.6,0,2015-11-07,1,1,1,1
+FAKE-0339,57,M,controle,sauvage,KRAS exons 2-4 (complet),7.4,1,2019-03-25,1,1,1,1
+FAKE-0340,54,F,controle,sauvage,KRAS exons 2-4 (complet),27.3,0,2015-05-03,1,1,1,1
+FAKE-0341,52,M,controle,sauvage,KRAS exons 2-4 (complet),21.6,1,2019-12-18,0,1,1,1
+FAKE-0342,60,M,controle,muté,test partiel (non valide),6.8,1,2015-11-20,1,1,1,1
+FAKE-0343,51,M,panitumumab,muté,KRAS exons 2-4 (complet),19.4,1,2017-02-05,1,1,0,1
+FAKE-0344,66,F,controle,sauvage,KRAS exon 2 seulement,15.0,1,2016-03-03,1,1,0,1
+FAKE-0345,64,M,panitumumab,sauvage,KRAS exons 2-4 (complet),6.7,1,2019-01-25,1,1,1,1
+FAKE-0346,68,F,panitumumab,muté,KRAS exons 2-4 (complet),25.8,0,2016-12-19,1,1,1,1
+FAKE-0347,68,M,controle,sauvage,KRAS exons 2-4 (complet),12.6,1,2018-09-20,1,1,1,1
+FAKE-0348,69,M,controle,sauvage,KRAS exons 2-4 (complet),24.2,1,2015-05-03,1,1,1,1
+FAKE-0349,59,M,controle,muté,test partiel (non valide),7.3,1,2017-04-06,1,1,1,1
+FAKE-0350,84,M,controle,sauvage,KRAS exons 2-4 (complet),13.9,1,2019-07-21,1,1,1,1
+FAKE-0351,65,M,controle,sauvage,KRAS exons 2-4 (complet),3.7,1,2019-08-19,1,1,1,1
+FAKE-0352,44,F,panitumumab,sauvage,KRAS exons 2-4 (complet),7.4,1,2016-01-16,1,1,1,1
+FAKE-0353,53,M,controle,muté,KRAS exon 2 seulement,18.6,1,2016-12-20,1,1,1,1
+FAKE-0354,46,M,panitumumab,sauvage,KRAS exons 2-4 (complet),25.8,0,2017-01-16,1,1,1,1
+FAKE-0355,63,F,controle,muté,KRAS exons 2-4 (complet),25.1,0,2017-10-28,1,1,1,1
+FAKE-0356,62,F,controle,sauvage,KRAS exon 2 seulement,9.1,1,2017-09-07,1,1,1,1
+FAKE-0357,58,F,panitumumab,muté,KRAS exon 2 seulement,0.3,1,2015-07-13,1,1,1,1
+FAKE-0358,83,M,controle,sauvage,test partiel (non valide),2.4,1,2018-10-23,1,1,1,1
+FAKE-0359,68,M,controle,muté,KRAS exons 2-4 (complet),2.5,1,2016-02-17,1,1,1,1
+FAKE-0360,70,M,controle,muté,KRAS exons 2-4 (complet),14.7,0,2016-07-28,1,1,1,1
+FAKE-0361,54,M,controle,sauvage,KRAS exons 2-4 (complet),4.9,1,2019-03-15,1,1,1,1
+FAKE-0362,53,M,panitumumab,muté,test partiel (non valide),4.5,1,2018-06-12,1,1,1,1
+FAKE-0363,63,M,controle,muté,KRAS exons 2-4 (complet),33.5,0,2016-12-24,1,1,1,1
+FAKE-0364,65,F,panitumumab,muté,KRAS exon 2 seulement,9.1,1,2019-07-24,1,1,1,1
+FAKE-0365,44,F,controle,sauvage,KRAS exons 2-4 (complet),5.6,1,2016-12-20,1,1,1,1
+FAKE-0366,61,F,controle,sauvage,KRAS exons 2-4 (complet),0.4,1,2017-10-29,1,1,1,1
+FAKE-0367,63,M,panitumumab,inconnu,non testé,1.6,1,2016-03-24,1,1,1,1
+FAKE-0368,61,F,controle,muté,KRAS exon 2 seulement,3.2,1,2015-12-01,0,1,1,1
+FAKE-0369,55,F,panitumumab,sauvage,KRAS exons 2-4 (complet),5.4,1,2017-06-16,1,1,1,1
+FAKE-0370,58,F,panitumumab,muté,test partiel (non valide),7.0,1,2017-10-24,1,1,1,1
+FAKE-0371,61,M,panitumumab,sauvage,KRAS exons 2-4 (complet),18.3,1,2019-01-10,1,1,1,1
+FAKE-0372,64,M,panitumumab,inconnu,non testé,4.4,1,2016-12-14,1,1,1,1
+FAKE-0373,69,M,controle,sauvage,KRAS exons 2-4 (complet),11.3,1,2019-06-22,1,1,1,1
+FAKE-0374,74,F,panitumumab,sauvage,KRAS exons 2-4 (complet),11.3,1,2018-01-13,1,1,1,1
+FAKE-0375,60,M,panitumumab,muté,KRAS exons 2-4 (complet),18.5,0,2015-05-08,1,1,1,0
+FAKE-0376,58,M,panitumumab,inconnu,non testé,12.2,1,2018-09-10,1,1,1,1
+FAKE-0377,67,M,controle,sauvage,KRAS exons 2-4 (complet),9.1,1,2017-11-15,1,1,1,1
+FAKE-0378,69,F,controle,muté,KRAS exons 2-4 (complet),6.3,1,2016-12-11,1,1,1,1
+FAKE-0379,59,F,panitumumab,muté,KRAS exons 2-4 (complet),7.7,1,2017-05-02,1,1,1,1
+FAKE-0380,71,M,controle,muté,KRAS exons 2-4 (complet),4.7,1,2016-07-04,1,1,1,1
+FAKE-0381,73,F,panitumumab,muté,KRAS exons 2-4 (complet),3.3,1,2018-01-26,1,0,1,1
+FAKE-0382,76,M,panitumumab,muté,KRAS exons 2-4 (complet),10.0,1,2017-10-31,1,1,1,1
+FAKE-0383,81,M,controle,sauvage,KRAS exons 2-4 (complet),5.3,1,2017-03-27,1,1,0,1
+FAKE-0384,54,F,controle,sauvage,KRAS exons 2-4 (complet),5.0,1,2016-06-04,1,1,1,1
+FAKE-0385,63,M,controle,muté,KRAS exons 2-4 (complet),28.3,0,2016-12-28,1,1,1,1
+FAKE-0386,63,F,controle,sauvage,KRAS exon 2 seulement,15.0,1,2017-06-27,1,1,1,1
+FAKE-0387,62,M,panitumumab,inconnu,non testé,8.1,1,2017-05-11,1,1,1,1
+FAKE-0388,57,F,panitumumab,sauvage,KRAS exon 2 seulement,22.4,1,2016-07-18,1,1,1,1
+FAKE-0389,48,F,controle,sauvage,KRAS exons 2-4 (complet),23.4,1,2017-11-28,1,0,1,1
+FAKE-0390,64,F,controle,muté,KRAS exons 2-4 (complet),,0,2016-02-18,1,1,1,1
+FAKE-0391,55,F,panitumumab,sauvage,KRAS exons 2-4 (complet),16.9,1,2017-07-03,1,1,1,1
+FAKE-0392,64,M,controle,muté,KRAS exons 2-4 (complet),0.8,1,2015-08-10,1,1,1,1
+FAKE-0393,55,F,controle,muté,KRAS exons 2-4 (complet),9.3,1,2017-05-11,0,1,1,1
+FAKE-0394,52,F,controle,inconnu,non testé,1.1,1,2018-12-01,1,1,1,1
+FAKE-0395,65,F,panitumumab,sauvage,KRAS exons 2-4 (complet),20.5,0,2019-02-01,1,1,1,1
+FAKE-0396,65,F,controle,sauvage,KRAS exons 2-4 (complet),2.0,1,2018-06-21,1,1,1,1
+FAKE-0397,69,F,panitumumab,sauvage,test partiel (non valide),1.4,1,2018-09-22,1,1,1,1
+FAKE-0398,85,M,panitumumab,sauvage,KRAS exons 2-4 (complet),39.6,0,2015-05-01,1,1,1,1
+FAKE-0399,66,M,controle,muté,KRAS exons 2-4 (complet),7.5,1,2016-09-15,1,1,1,1
+FAKE-0400,68,F,panitumumab,muté,KRAS exon 2 seulement,8.3,1,2018-04-09,0,1,1,1

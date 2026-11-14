@@ -52,3 +52,24 @@ def test_fake_data_proportions_and_seed():
 def test_km_median():
     assert engine.kaplan_meier_median(pd.Series([1, 2, 3, 4]), pd.Series([1, 1, 1, 1])) == 2.0
     assert engine.kaplan_meier_median(pd.Series([1, 2]), pd.Series([0, 0])) is None
+
+
+def test_availability_scale_s0_to_s4():
+    df = fake_data.generate()
+    r = engine.count_usable(df, Q)
+    ns = [s["n"] for s in r["entonnoir"]]
+    assert len(ns) == 5 and ns[0] == 400 and ns == sorted(ns, reverse=True)
+    assert r["utilisables"] == ns[-1] and r["statut"] == "calculé"
+
+
+def test_unvalidated_key_gives_indeterminate_not_a_number():
+    r = engine.count_usable(fake_data.generate(), Q, key_validated=False)
+    assert r["utilisables"] is None and r["statut"] == "indéterminé" and len(r["entonnoir"]) == 4
+
+
+def test_small_totals_are_masked():
+    assert engine.mask(4) is None and engine.mask(5) == 5
+    tiny = fake_data.generate().head(30)
+    for g in engine.group_summary(engine.count_usable(tiny, Q)["data"], Q):
+        for k in ("n_traite", "n_controle"):
+            assert g[k] is None or g[k] >= 5

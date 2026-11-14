@@ -58,6 +58,13 @@ def generate(n: int = N, seed: int = SEED) -> pd.DataFrame:
             "date_inclusion": pd.to_datetime("2015-01-01") + pd.to_timedelta(rng.integers(0, 365 * 5, n), unit="D"),
         }
     )
+    # Colonnes de disponibilité des échantillons (tirées après les autres : les colonnes précédentes sont inchangées)
+    rng2 = np.random.default_rng(seed + 1)
+    df["echantillon_en_stock"] = (rng2.random(n) < 0.92).astype(int)   # l'échantillon est encore à la biobanque
+    df["quantite_suffisante"] = (rng2.random(n) < 0.95).astype(int)    # assez de matériel pour l'analyse
+    df["consentement_ok"] = (rng2.random(n) < 0.96).astype(int)        # consentement compatible avec la recherche
+    df["cle_liaison_valide"] = (rng2.random(n) < 0.98).astype(int)     # lien validé patient <-> bras <-> résultats
+
     # valeurs manquantes volontaires (~5 % de survie non renseignée)
     missing = rng.choice(n, size=int(0.05 * n), replace=False)
     df.loc[missing, "survie_mois"] = np.nan

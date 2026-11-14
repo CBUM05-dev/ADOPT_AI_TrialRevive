@@ -4,11 +4,14 @@
 2) count_usable  : compte les patients utilisables de l'essai interne (entonnoir 400 -> N).
 3) group_summary : médianes de survie par groupe (Kaplan-Meier), descriptif seulement.
 """
+import re
 import sqlite3
 from pathlib import Path
 
 import numpy as np
 import pandas as pd
+
+from src.tolerances import COUVERTURE_IDEALE, COUVERTURE_MIN, LEVELS, TOLERANCES, level_min
 
 ROOT = Path(__file__).resolve().parent.parent
 DB_PATH = ROOT / "data" / "trials.db"
@@ -25,18 +28,25 @@ def load_cvs(db_path: Path = DB_PATH) -> list[dict]:
         ]
 
 
+def _coverage(cv: dict):
+    n, tot = cv.get("n_kras_evalue"), cv.get("nb_patients")
+    return (n / tot) if n and tot else None
+
+
 def screen_trial(q: dict, cv: dict) -> dict:
-    """Retourne {retenu, niveau ('direct'|'classe'|None), raison, etape_rejet}."""
+    """Retourne {retenu, niveau, raison, etape_rejet, score, plafond, bonus, ecarts}.
+
+    Obligatoire : un échec élimine. Toléré : le score baisse et la preuve est plafonnée. Idéal : bonus de classement.
+    """
     ex = q["exigences"]
     out = {"nct_id": cv["nct_id"], "titre": cv["titre"], "lien": cv["lien"], "nb_patients": cv["nb_patients"]}
 
     def reject(step, reason):
         return {**out, "retenu": False, "niveau": None, "etape_rejet": step, "raison": reason}
 
-    # 1. randomisé
+    # --- OBLIGATOIRE ---
     if ex["randomise"] and not cv["randomise"]:
         return reject(1, "pas randomisé")
-    # 2. traitement
     tr = (cv["traitement"] or "").lower()
     if q["traitement"] in tr:
         niveau = "direct"
@@ -44,33 +54,66 @@ def screen_trial(q: dict, cv: dict) -> dict:
         niveau = "classe"
     else:
         return reject(2, f"traitement différent ({cv['traitement'] or 'aucun anti-EGFR détecté'})")
-    # 3. biomarqueur mesuré
     if ex["biomarqueur_mesure"] and not cv["biomarqueur_mesure"]:
         return reject(3, f"{q['biomarqueur']} non mesuré (ni dans le registre, ni dans une réanalyse connue)")
-    # 4. analyse par sous-groupe possible
     if ex["analyse_sous_groupe"] and not cv["sous_groupe_possible"]:
         return reject(4, f"population limitée à un seul statut ({cv['population_biomarqueur']}) : comparaison muté/sauvage impossible")
-    # 5. taille
     if (cv["nb_patients"] or 0) < ex["taille_min"]:
         return reject(5, f"trop petit ({cv['nb_patients']} patients < {ex['taille_min']})")
+    cov = _coverage(cv)
+    if cov is not None and cov < COUVERTURE_MIN:
+        return reject(6, f"statut {q['biomarqueur']} connu pour seulement {cov:.0%} des patients (minimum {COUVERTURE_MIN:.0%})")
+
+    # --- TOLÉRÉ : chaque écart coûte un score et plafonne la preuve ---
+    used = []
+    if niveau == "classe":
+        used.append("molecule_classe")
+    if cov is None:
+        used.append("couverture_inconnue")
+    elif cov < COUVERTURE_IDEALE:
+        used.append("couverture_60_80")
+    prim = (cv.get("critere_principal") or "").lower()
+    if re.search(r"respon|remission|orr", prim) and not re.search(r"surviv|overall|progression|os|pfs", prim):
+        used.append("critere_substitue")
+
+    score, plafond, ecarts = 1.0, "E4", []
+    for key in used:
+        t = TOLERANCES[key]
+        score *= t["score"]
+        plafond = level_min(plafond, t["plafond"])
+        ecarts.append(t["phrase"])
+
+    # --- IDÉAL : bonus de classement ---
+    bonus = int(niveau == "direct") + int(cov is not None and cov >= COUVERTURE_IDEALE)
 
     return {
         **out,
         "retenu": True,
         "niveau": niveau,
         "etape_rejet": None,
-        "raison": "répond à toutes les exigences" + (" (preuve de classe, autre médicament anti-EGFR)" if niveau == "classe" else ""),
+        "raison": "répond à toutes les exigences obligatoires" + (f", avec {len(ecarts)} écart(s) toléré(s)" if ecarts else ""),
+        "score": round(score, 2),
+        "plafond": plafond,
+        "bonus": bonus,
+        "couverture": cov,
+        "ecarts": ecarts,
         "reanalyse_verifiee": cv.get("reanalyse_verifiee"),
         "n_kras_evalue": cv.get("n_kras_evalue"),
     }
 
 
 def screen_trials(q: dict, cvs: list[dict]) -> list[dict]:
-    return [screen_trial(q, cv) for cv in cvs]
+    """Retenus classés : plafond de preuve, puis score, puis bonus, puis effectif (comme dans la description technique)."""
+    res = [screen_trial(q, cv) for cv in cvs]
+    kept = sorted(
+        [r for r in res if r["retenu"]],
+        key=lambda r: (-LEVELS.index(r["plafond"]), -r["score"], -r["bonus"], -(r["nb_patients"] or 0)),
+    )
+    return kept + [r for r in res if not r["retenu"]]
 
 
 def rejection_summary(results: list[dict]) -> dict:
-    steps = {1: "pas randomisé", 2: "traitement différent", 3: "biomarqueur non mesuré", 4: "un seul statut", 5: "trop petit"}
+    steps = {1: "pas randomisé", 2: "traitement différent", 3: "biomarqueur non mesuré", 4: "un seul statut", 5: "trop petit", 6: "statut connu pour trop peu de patients"}
     counts = {label: 0 for label in steps.values()}
     for r in results:
         if not r["retenu"]:
@@ -80,19 +123,38 @@ def rejection_summary(results: list[dict]) -> dict:
 
 
 # ---------- essai interne fictif ----------
-def count_usable(df: pd.DataFrame, q: dict) -> dict:
-    """Entonnoir : chaque étape retire des patients. Retourne l'entonnoir + le dataframe utilisable."""
-    steps = [("Patients dans l'essai interne (fictif)", df)]
-    d = df[df["traitement"].isin([q["traitement"], "controle"])]
-    steps.append(("Traitement connu", d))
-    d = d[d["kras_statut"].isin(["muté", "sauvage"])]
-    steps.append((f"Statut {q['biomarqueur']} connu", d))
-    d = d[d["methode_test"].isin(q["methodes_valides"])]
-    steps.append(("Méthode de test valide", d))
-    d = d[d["survie_mois"].notna() & d["evenement"].notna()]
-    steps.append(("Données de survie complètes", d))
-    funnel = [{"etape": name, "n": len(x)} for name, x in steps]
-    return {"entonnoir": funnel, "utilisables": len(d), "data": d}
+MASK_BELOW = 5  # un total inférieur à 5 ne sort jamais (risque de réidentification)
+
+
+def mask(n: int):
+    """Total publiable : None si < 5."""
+    return None if n < MASK_BELOW else int(n)
+
+
+def count_usable(df: pd.DataFrame, q: dict, key_validated: bool = True) -> dict:
+    """Échelle de disponibilité : chaque patient monte de S0 (prévu) à S4 (complet). Seuls les S4 comptent.
+
+    S0 prévu -> S1 collecté -> S2 existant -> S3 utilisable -> S4 complet.
+    Si le lien patient/bras/résultats n'est pas validé (key_validated=False) : résultat « indéterminé », jamais une estimation.
+    """
+    s0 = df
+    s1 = s0[s0["kras_statut"].isin(["muté", "sauvage"])]                                  # un test a été fait
+    s2 = s1[s1["echantillon_en_stock"] == 1]                                                # échantillon encore en stock
+    s3 = s2[(s2["quantite_suffisante"] == 1) & (s2["consentement_ok"] == 1)
+            & s2["methode_test"].isin(q["methodes_valides"])]                              # quantité, consentement, méthode valide
+    s4 = s3[(s3["cle_liaison_valide"] == 1) & s3["traitement"].isin([q["traitement"], "controle"])
+            & s3["survie_mois"].notna() & s3["evenement"].notna()]                         # relié au bras et au résultat
+    names = [
+        ("S0 prévu : patients de l'essai", s0),
+        ("S1 collecté : statut du marqueur testé", s1),
+        ("S2 existant : échantillon encore en stock", s2),
+        ("S3 utilisable : quantité, consentement et méthode OK", s3),
+        ("S4 complet : relié à son groupe et à son résultat", s4),
+    ]
+    funnel = [{"etape": name, "n": len(x), "n_publie": mask(len(x))} for name, x in names]
+    if not key_validated:
+        return {"entonnoir": funnel[:4], "utilisables": None, "statut": "indéterminé", "data": s4.iloc[0:0]}
+    return {"entonnoir": funnel, "utilisables": mask(len(s4)), "statut": "calculé", "data": s4}
 
 
 def kaplan_meier_median(time: pd.Series, event: pd.Series) -> float | None:
@@ -127,11 +189,12 @@ def group_summary(data: pd.DataFrame, q: dict) -> list[dict]:
         rows.append(
             {
                 "statut": status,
-                "n_traite": n_t,
-                "n_controle": n_c,
-                "mediane_traite": m_t,
-                "mediane_controle": m_c,
-                "gain_mois": None if m_t is None or m_c is None else round(m_t - m_c, 1),
+                "n_traite": mask(n_t),
+                "n_controle": mask(n_c),
+                "mediane_traite": m_t if n_t >= MASK_BELOW else None,
+                "mediane_controle": m_c if n_c >= MASK_BELOW else None,
+                "evenements": int(data[(data["kras_statut"] == status)]["evenement"].sum()),
+                "gain_mois": None if (m_t is None or m_c is None or min(n_t, n_c) < MASK_BELOW) else round(m_t - m_c, 1),
             }
         )
     return rows
