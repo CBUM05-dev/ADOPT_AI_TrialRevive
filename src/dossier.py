@@ -28,10 +28,13 @@ def build_dossier(q: dict, screening: list[dict], rejection: dict, usable: dict,
     sources = [
         {"nct_id": r["nct_id"], "lien": r["lien"], "niveau": r["niveau"],
          "reanalyse": REANALYSES.get(r["nct_id"], {}).get("publication"),
+         "publication_lien": (f"https://doi.org/{REANALYSES[r['nct_id']]['doi']}"
+                              if REANALYSES.get(r["nct_id"], {}).get("doi") else None),
          "reanalyse_verifiee": REANALYSES.get(r["nct_id"], {}).get("verifie")}
         for r in kept
     ]
     all_verified = bool(kept) and all(r.get("reanalyse_verifiee") for r in kept)
+    indetermination = usable.get("raison_indetermination") or "effectif inférieur à 5 (masqué)"
     return {
         "question": q["question"],
         "retenus": v["essais"],
@@ -40,6 +43,7 @@ def build_dossier(q: dict, screening: list[dict], rejection: dict, usable: dict,
         "entonnoir": funnel,
         "utilisables": usable["utilisables"],
         "statut_comptage": usable["statut"],
+        "raison_indetermination": usable.get("raison_indetermination"),
         "groupes": groups,
         "verdict": {"R": v["R"], "R_texte": verdict.R_LABELS[v["R"]], "E": v["E"], "E_texte": verdict.E_LABELS[v["E"]],
                     "E_pourquoi": v["E_pourquoi"], "G": v["G"], "preuve_verifiee": all_verified},
@@ -48,7 +52,7 @@ def build_dossier(q: dict, screening: list[dict], rejection: dict, usable: dict,
             f"{q['biomarqueur']} sauvage et muté, puis tester l'interaction traitement × {q['biomarqueur']}. "
             + (f"Confirmer sur les données internes : {usable['utilisables']} patients complets sur {funnel[0]['n']}."
                if usable["utilisables"] is not None
-               else "Comptage interne indéterminé : le lien entre les données n'est pas validé.")
+               else f"Comptage interne indéterminé : {indetermination}.")
         ),
         "statistique": {"evenements_necessaires_par_groupe": need, "evenements_internes": have, "suffisant": power_ok,
                         "hr_hypothese": HR_PORTEURS_HYPOTHESE},
@@ -62,11 +66,14 @@ def build_dossier(q: dict, screening: list[dict], rejection: dict, usable: dict,
         "sources": sources,
         "limites": [
             "Prototype de hackathon : l'essai interne est entièrement fictif.",
-            "Les réanalyses publiées ont été saisies de mémoire et ne sont pas encore vérifiées par un humain.",
+            "Les références bibliographiques sont rattachées au cache du registre ; les effectifs KRAS et les conclusions, "
+            "initialement saisis de mémoire, restent à vérifier dans les publications par la personne Science.",
+            "La fiche de question et les règles cliniques ne sont pas encore validées par la personne Science.",
             "Les notes E (preuve) sont des niveaux ATTEIGNABLES : il reste des conditions à confirmer "
             "(méthode validée, plan d'analyse fixé à l'avance).",
             "Les points des tolérances (scores) sont des valeurs de travail à valider par la personne Science.",
-            "Le tri s'appuie sur les textes du registre ClinicalTrials.gov ; la lecture par IA n'a été faite que sur peu d'essais.",
+            "Le tri s'appuie sur des règles appliquées au registre ClinicalTrials.gov ; aucune extraction par IA n'a été réalisée.",
+            "Seul KRAS est pris en charge ; le comptage interne panitumumab ne doit pas être extrapolé à un autre traitement.",
         ],
     }
 
@@ -94,7 +101,7 @@ def to_markdown(d: dict) -> str:
     for s in d["entonnoir"]:
         L.append(f"- {s['etape']} : {s['n_publie'] if s['n_publie'] is not None else '<5 (masqué)'}")
     if d["utilisables"] is None:
-        L.append("\n**Patients complets : INDÉTERMINÉ** (lien entre les données non validé)")
+        L.append(f"\n**Patients complets : INDÉTERMINÉ ou masqué** ({d.get('raison_indetermination') or 'effectif inférieur à 5'})")
     else:
         L.append(f"\n**Patients complets : {d['utilisables']}**")
     st = d["statistique"]
@@ -114,7 +121,8 @@ def to_markdown(d: dict) -> str:
     L.append(f"- _{g['note']}_")
     L.append("\n## 6. Sources")
     for s in d["sources"]:
-        extra = f" — {s['reanalyse']} ({'vérifiée' if s['reanalyse_verifiee'] else 'à vérifier'})" if s["reanalyse"] else ""
+        citation = f"[{s['reanalyse']}]({s['publication_lien']})" if s.get("publication_lien") else s["reanalyse"]
+        extra = f" — {citation} ({'vérifiée' if s['reanalyse_verifiee'] else 'à vérifier'})" if s["reanalyse"] else ""
         L.append(f"- {s['lien']}{extra}")
     L.append("\n## 7. Limites")
     L += [f"- {x}" for x in d["limites"]]

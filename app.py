@@ -1,12 +1,7 @@
-import json
-from pathlib import Path
-
 import pandas as pd
 import streamlit as st
 
-from src import dossier, engine, fake_data, question
-
-BASELINE_DIR = Path(__file__).parent / "data" / "baseline"
+from src import compare, dossier, engine, fake_data, question
 
 st.set_page_config(page_title="TrialRevive", page_icon="🧪", layout="wide")
 st.markdown("<style>html, body, [class*='css'] {font-size: 18px;}</style>", unsafe_allow_html=True)
@@ -42,7 +37,7 @@ def analyse():
     except ValueError as exc:
         st.session_state["error"] = str(exc)
     except Exception as exc:  # base absente, etc.
-        st.session_state["error"] = f"Erreur inattendue : {exc}. Avez-vous lancé `python -m src.fetch` puis `python -m src.cv` ?"
+        st.session_state["error"] = f"Erreur inattendue : {exc}. Avez-vous lancé `python -m src.fetch --offline` puis `python -m src.cv` ?"
 
 
 def demo():
@@ -95,7 +90,8 @@ if res:
 
     with tabs[2]:
         if d["utilisables"] is None:
-            st.subheader("Comptage INDÉTERMINÉ : le lien entre les données n'est pas validé")
+            st.subheader("Comptage indéterminé ou masqué")
+            st.caption(d.get("raison_indetermination") or "Effectif inférieur à 5.")
         else:
             st.subheader(f"{d['utilisables']} patients complets sur {d['entonnoir'][0]['n']} (données FICTIVES)")
         funnel = pd.DataFrame(d["entonnoir"]).set_index("etape")[["n"]]
@@ -108,21 +104,4 @@ if res:
         st.download_button("Télécharger le dossier (Markdown)", res["markdown"], "dossier_trialrevive.md", "text/markdown")
 
     with tabs[4]:
-        files = sorted(BASELINE_DIR.glob("*.json")) if BASELINE_DIR.exists() else []
-        if not files:
-            st.info("Aucune réponse d'IA généraliste enregistrée. Voir data/baseline/LISEZ_MOI.md pour les ajouter.")
-        for f in files:
-            try:
-                b = json.loads(f.read_text(encoding="utf-8"))
-            except json.JSONDecodeError:
-                st.warning(f"{f.name} illisible")
-                continue
-            st.markdown(f"#### Question : {b.get('question', f.stem)}")
-            a, t = st.columns(2)
-            a.markdown("**IA généraliste**  \n" + str(b.get("reponse_ia", "")))
-            a.caption(f"Modèle : {b.get('modele', '?')} — {b.get('date', '?')}")
-            t.markdown("**TrialRevive**  \n" + f"{len(d['retenus'])} essais retenus, {d['utilisables']} patients utilisables comptés, sources cliquables.")
-            st.table(pd.DataFrame(
-                {"Critère": ["Compte les patients utilisables ?", "Sources vérifiables ?", "Explique les rejets ?"],
-                 "IA généraliste": [b.get("compte_patients", "?"), b.get("sources_verifiables", "?"), b.get("explique_rejets", "?")],
-                 "TrialRevive": ["oui", "oui (liens NCT)", "oui"]}))
+        compare.render_comparison(d)

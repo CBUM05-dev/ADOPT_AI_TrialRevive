@@ -1,7 +1,7 @@
 """Brique 3 : traduire une question scientifique en exigences précises (fiche de la question).
 
 Le cas vedette est codé en dur (à faire valider par la personne Science).
-Les autres questions passent par des règles simples (médicament + marqueur reconnus dans le texte).
+Seul KRAS est couvert par le jeu de données interne et les réanalyses du prototype.
 """
 import re
 
@@ -55,12 +55,16 @@ CAS_VEDETTE_TEXTE = "Le statut KRAS change-t-il l'effet du panitumumab dans le c
 def parse_question(text: str) -> dict:
     """Retourne la fiche de la question, ou lève ValueError si le médicament/marqueur n'est pas reconnu."""
     drugs = [d for ds in CLASSES.values() for d in ds]
-    drug = next((d for d in drugs if re.search(d, text, re.I)), None)
-    marker = next((m for m in MARKERS if re.search(rf"\b{m}\b", text, re.I)), None)
-    if not drug or not marker:
+    found_drugs = [d for d in drugs if re.search(rf"\b{d}\b", text, re.I)]
+    found_markers = [m for m in MARKERS if re.search(rf"\b{m}\b", text, re.I)]
+    if len(found_drugs) != 1 or len(found_markers) != 1:
         raise ValueError(
-            "Question non reconnue : mentionnez un médicament (panitumumab, cetuximab) et un biomarqueur (KRAS, NRAS, BRAF)."
+            "Question non reconnue ou ambiguë : mentionnez un seul médicament "
+            "(panitumumab ou cetuximab) et le marqueur KRAS."
         )
+    drug, marker = found_drugs[0], found_markers[0]
+    if marker != "KRAS":
+        raise ValueError("Ce prototype prend en charge KRAS uniquement. Les données NRAS, BRAF et RAS ne sont pas disponibles.")
     card = question_card(drug, marker, text)
     if drug == "panitumumab" and marker == "KRAS":
         card["validee_par_humain"] = False  # passer à True quand la personne Science a relu

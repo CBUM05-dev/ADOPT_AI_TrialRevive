@@ -4,16 +4,13 @@ Lancer : python -m streamlit run app_ui.py
 Même logique que app.py (src/ inchangé) : seule l'apparence change.
 """
 import html
-import json
-from pathlib import Path
 
 import pandas as pd
 import streamlit as st
 
-from src import dossier, engine, fake_data, question
+from src import compare, dossier, engine, fake_data, question
 from src.pill3d import render_pill
 
-BASELINE_DIR = Path(__file__).parent / "data" / "baseline"
 E_COLORS = {"E0": "#ef4444", "E1": "#f97316", "E2": "#f59e0b", "E3": "#16a34a", "E4": "#0f766e"}
 E_LEVELS = ["E0", "E1", "E2", "E3", "E4"]
 
@@ -187,7 +184,7 @@ def analyse():
     except ValueError as exc:
         st.session_state["error"] = str(exc)
     except Exception as exc:
-        st.session_state["error"] = f"Erreur inattendue : {exc}. Lancez `python -m src.fetch` puis `python -m src.cv`."
+        st.session_state["error"] = f"Erreur inattendue : {exc}. Lancez `python -m src.fetch --offline` puis `python -m src.cv`."
 
 
 def demo():
@@ -332,7 +329,8 @@ elif page == "Patients":
         st.markdown(f'<span class="chip warn" style="margin-left:0">{icon("alert", 16)} DONNÉES FICTIVES : aucun patient réel</span>', unsafe_allow_html=True)
         f = d["entonnoir"]
         if d["utilisables"] is None:
-            st.markdown("### Comptage INDÉTERMINÉ : le lien entre les données n'est pas validé")
+            st.markdown("### Comptage indéterminé ou masqué")
+            st.caption(d.get("raison_indetermination") or "Effectif inférieur à 5.")
         else:
             st.markdown(block(f"""<div class="bignum"><span class="a">{f[0]['n']}</span>{icon('arrow', 38, '#14b8a6', 2.4)}
                 <span class="b">{d['utilisables']}</span><span style="color:#0b2a3c">patients réellement analysables</span></div>"""), unsafe_allow_html=True)
@@ -362,29 +360,6 @@ elif page == "Comparaison":
     if not res:
         need_result()
     else:
-        d = res["dossier"]
-        loaded = []
-        for fpath in (sorted(BASELINE_DIR.glob("*.json")) if BASELINE_DIR.exists() else []):
-            try:
-                loaded.append(json.loads(fpath.read_text(encoding="utf-8")))
-            except json.JSONDecodeError:
-                continue
-        b = loaded[0] if loaded else {}
-        ia_answer = e(b.get("reponse_ia", "À tester en direct devant le jury : poser la même question à une IA généraliste."))
-        ia = lambda k: b.get(k, "à tester en direct")  # noqa: E731
-        ck, hp = icon("check", 20, "#16a34a", 2.6), icon("help", 20, "#b45309", 2.2)
-        st.markdown(block(f"""<div class="cmp">
-            <div class="box tr"><h3 style="display:flex;gap:10px;align-items:center">{icon('pill', 26, '#0f766e')} TrialRevive</h3>
-              <p>{ck}<span>{len(d['retenus'])} essais retenus, {d['rejection']['total'] - len(d['retenus'])} écartés avec raison</span></p>
-              <p>{ck}<span>Compte les patients réellement analysables ({d['utilisables']})</span></p>
-              <p>{ck}<span>Sources cliquables (ClinicalTrials.gov)</span></p>
-              <p>{ck}<span>Même question = même résultat</span></p></div>
-            <div class="box ai"><h3 style="display:flex;gap:10px;align-items:center">{icon('search', 26, '#64748b')} IA généraliste</h3>
-              <p>{hp}<span>Compte les patients : {e(ia('compte_patients'))}</span></p>
-              <p>{hp}<span>Sources vérifiables : {e(ia('sources_verifiables'))}</span></p>
-              <p>{hp}<span>Explique les rejets : {e(ia('explique_rejets'))}</span></p>
-              <p style="color:#5b7285;font-size:.85rem">{ia_answer[:600]}</p></div></div>"""), unsafe_allow_html=True)
-        if not loaded:
-            st.caption("Aucune réponse enregistrée : voir data/baseline/LISEZ_MOI.md pour remplir cette colonne avec une vraie réponse.")
+        compare.render_comparison(res["dossier"])
 
 st.markdown('<div class="foot">Prototype · essais publics ClinicalTrials.gov + essai interne fictif · aucune donnée de santé réelle</div>', unsafe_allow_html=True)

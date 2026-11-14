@@ -11,8 +11,9 @@
 
 ## À préparer
 - [ ] Vidéo de secours de la démo (si le live plante)
-- [ ] 5 slides max
-- [ ] Questions probables : d'où viennent les données ? ça marche sur d'autres cas ? risque de fausse info ? confidentialité ? limites ?
+- [x] 5 diapositives rédigées : `docs/PRESENTATION.md` (mise en forme finale dans l'outil de l'équipe à faire)
+- [x] Questions probables et réponses honnêtes : `PITCH.md`
+- [x] Export de secours statique : `python -m src.demo` (ce n'est pas une vidéo)
 - [ ] 2 répétitions chronométrées, une personne désignée pour parler, une pour piloter la démo
 
 ## Vérification

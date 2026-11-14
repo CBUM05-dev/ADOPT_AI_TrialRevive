@@ -73,3 +73,16 @@ def test_small_totals_are_masked():
     for g in engine.group_summary(engine.count_usable(tiny, Q)["data"], Q):
         for k in ("n_traite", "n_controle"):
             assert g[k] is None or g[k] >= 5
+
+
+@pytest.mark.parametrize("marker", ["NRAS", "BRAF", "RAS", "KRAS et BRAF"])
+def test_unsupported_or_ambiguous_markers_never_reuse_kras_data(marker):
+    with pytest.raises(ValueError):
+        question.parse_question(f"Le statut {marker} change-t-il l'effet du panitumumab ?")
+
+
+def test_other_drug_has_no_internal_treatment_arm():
+    q = question.parse_question("Le statut KRAS change-t-il l'effet du cetuximab ?")
+    u = engine.count_usable(fake_data.load(), q)
+    assert u["utilisables"] is None and u["statut"] == "indéterminé"
+    assert u["data"].empty and "aucun bras cetuximab" in u["raison_indetermination"]

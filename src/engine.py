@@ -152,8 +152,12 @@ def count_usable(df: pd.DataFrame, q: dict, key_validated: bool = True) -> dict:
         ("S4 complet : relié à son groupe et à son résultat", s4),
     ]
     funnel = [{"etape": name, "n": len(x), "n_publie": mask(len(x))} for name, x in names]
-    if not key_validated:
-        return {"entonnoir": funnel[:4], "utilisables": None, "statut": "indéterminé", "data": s4.iloc[0:0]}
+    missing_treatment = not (df["traitement"] == q["traitement"]).any()
+    if not key_validated or missing_treatment:
+        reason = (f"aucun bras {q['traitement']} dans l'essai interne fictif" if missing_treatment
+                  else "le lien entre les données n'est pas validé")
+        return {"entonnoir": funnel[:4], "utilisables": None, "statut": "indéterminé",
+                "raison_indetermination": reason, "data": s4.iloc[0:0]}
     return {"entonnoir": funnel, "utilisables": mask(len(s4)), "statut": "calculé", "data": s4}
 
 
