@@ -1,4 +1,3 @@
-import { Capsule } from "./capsule.js";
 import { ILLUSTRATION, ART } from "./illustration.js";
 
 /* ================= utilitaires ================= */
@@ -63,16 +62,16 @@ async function api(path, body) {
 
 /* ================= état ================= */
 const state = { dossier: null, markdown: "", question: "", example: "", loading: false };
-let capsule = null;
+// La preuve se lit à l'intensité : plus elle est forte, plus le vert est foncé.
 const E_COLOR = { E0: "#dbe4df", E1: "#bfe6d3", E2: "#86d1ae", E3: "#3fae7f", E4: "#1b7f58" };
 const DEFAULT_EXAMPLE = "Le statut KRAS change-t-il l'effet du panitumumab dans le cancer colorectal métastatique ?";
 const REJECT = {
-  1: ["Pas de tirage au sort", "#e6ebf2"],
-  2: ["Autre médicament", "#d6dfeb"],
-  3: ["Marqueur non mesuré", "#c7d3e3"],
-  4: ["Un seul statut du marqueur", "#b8c6dc"],
-  5: ["Trop peu de patients", "#a9bad4"],
-  6: ["Statut connu pour trop peu de patients", "#9aaecb"],
+  1: ["Pas de tirage au sort", "#F5F5F5"],
+  2: ["Autre médicament", "#E4E4E4"],
+  3: ["Marqueur non mesuré", "#D9D9D9"],
+  4: ["Un seul statut du marqueur", "#BDBDBD"],
+  5: ["Trop peu de patients", "#6E6E6E"],
+  6: ["Statut connu pour trop peu de patients", "#4A4A4A"],
 };
 const ROUTES = {
   apercu: ["Aperçu", "grid"],
@@ -92,14 +91,15 @@ function meter(level, small) {
   return h("div", { class: "meter" + (small ? " meter-sm" : ""), role: "img", "aria-label": `Preuve ${level}` }, segs);
 }
 const evidenceTag = (level) => h("span", { class: "num", style: "display:inline-flex;gap:10px;align-items:center" }, meter(level, true), h("b", {}, level));
-const kindBadge = (niveau) => h("span", { class: "badge " + (niveau === "direct" ? "badge-cobalt" : "badge-slate") }, niveau === "direct" ? "Médicament exact" : "Même classe");
+const kindBadge = (niveau) => h("span", { class: "badge " + (niveau === "direct" ? "badge-ink" : "badge-soft") }, niveau === "direct" ? "Médicament exact" : "Même classe");
 
 function artRow(names) {
   return h("div", { class: "art" }, names.map((n) => h("span", { class: `art-${n}`, html: ART[n] })));
 }
 function pageHead(title, text, names, extra) {
+  const label = ROUTES[route()]?.[0];
   return h("header", { class: "pagehead" },
-    h("div", { class: "pagehead-copy" }, h("h2", {}, title), text && h("p", {}, text), extra),
+    h("div", { class: "pagehead-copy" }, label && label !== title && h("p", { class: "kicker" }, label), h("h2", {}, title), text && h("p", {}, text), extra),
     names && names.length ? artRow(names) : null);
 }
 const HEAD_ART = {
@@ -163,7 +163,7 @@ function trialDrawer(t) {
         src.publication_lien && h("p", { style: "margin-top:6px" }, h("a", { href: src.publication_lien, target: "_blank", rel: "noopener" }, "Ouvrir la publication")));
     }
   } else {
-    body.append(h("div", { style: "margin-top:8px" }, h("span", { class: "badge badge-slate" }, "Écarté")), h("h4", {}, "Raison"), h("p", {}, t.raison));
+    body.append(h("div", { style: "margin-top:8px" }, h("span", { class: "badge badge-soft" }, "Écarté")), h("h4", {}, "Raison"), h("p", {}, t.raison));
   }
   body.append(h("p", { style: "margin-top:22px" }, h("a", { href: t.lien, target: "_blank", rel: "noopener" }, "Voir la fiche sur ClinicalTrials.gov")));
   return body;
@@ -177,9 +177,6 @@ function landing() {
     { q: example.replace("panitumumab", "cetuximab"), tag: "Sans comptage interne" },
   ];
   if (state.question && !all.some((x) => x.q === state.question)) all.push({ q: state.question, tag: "Dernière analyse" });
-
-  const canvas = h("canvas", { "aria-hidden": "true" });
-  const fallback = h("div", { class: "fallback", hidden: true, html: '<svg width="120" height="120" viewBox="0 0 64 64" aria-hidden="true"><g transform="rotate(-45 32 32)"><rect x="8" y="22" width="48" height="20" rx="10" fill="#e8eeea" stroke="#1a1a1a" stroke-width="2"/><path d="M32 22h14a10 10 0 0 1 0 20H32z" fill="#3fae7f" stroke="#1a1a1a" stroke-width="2"/></g></svg>' });
 
   const input = h("input", { id: "finder", type: "text", maxlength: "600", autocomplete: "off", role: "combobox", "aria-expanded": "true", "aria-controls": "suggest",
     "aria-autocomplete": "list", "aria-label": "Rechercher une question scientifique", placeholder: "Rechercher une question scientifique" });
@@ -209,10 +206,10 @@ function landing() {
   const go = h("button", { class: "finder-go", type: "submit", "aria-label": "Analyser la question" }, icon("arrow", 20));
   const form = h("form", { onsubmit: (e) => { e.preventDefault(); run(active >= 0 && shown[active] ? shown[active].q : input.value); } }, input, go);
 
-  setTimeout(() => { capsule?.dispose(); capsule = new Capsule(canvas, fallback); }, 0);
   return h("section", { class: "home", "aria-labelledby": "h1" },
-    h("h1", { id: "h1" }, "Trouvez les essais qui peuvent répondre à votre question"),
-    h("div", { class: "illus" }, h("div", { html: ILLUSTRATION }), h("div", { class: "cap3d" }, canvas, fallback)),
+    h("div", { class: "home-top" },
+      h("div", {}, h("h1", { id: "h1" }, "Trouvez les essais qui peuvent répondre à votre question"), h("p", { class: "lede" }, "Une question entre. Un dossier de faisabilité sort.")),
+      h("div", { class: "illus", html: ILLUSTRATION })),
     h("div", { class: "finder" }, form, list),
     h("p", { class: "home-note" }, "Essais publics de ClinicalTrials.gov. Patients de l'essai interne fictifs.",
       state.dossier && [" ", h("a", { href: "#/apercu" }, "Revenir au dernier dossier")]),
@@ -223,10 +220,10 @@ function reading(d) {
   const v = d.verdict;
   const gains = v.G.slice(0, 3).map((g) => h("li", {}, h("b", {}, g.code), g.gain));
   const panel = (art, k, value, valueStyle, ...rest) =>
-    h("div", { class: "rpanel" }, h("span", { class: "rico", html: ART[art] }), h("p", { class: "k" }, k), h("p", { class: "v", style: valueStyle }, value), ...rest);
+    h("div", { class: "rpanel" + (art === "heart" ? " key" : "") }, h("span", { class: "rico", html: ART[art] }), h("p", { class: "k" }, k), h("p", { class: "v", style: valueStyle }, value), ...rest);
   return h("section", { class: "reading", "aria-label": "Verdict" },
     panel("syringe", "Comment obtenir la réponse", v.R, "", h("p", { class: "d" }, v.R_texte)),
-    panel("heart", "Force de la preuve atteignable", v.E, `color:${E_COLOR[v.E]}`, meter(v.E), h("p", { class: "d" }, `${v.E_texte}. Atteignable, pas acquis.`),
+    panel("heart", "Force de la preuve atteignable", v.E, "", meter(v.E), h("p", { class: "d" }, `${v.E_texte}. Atteignable, pas acquis.`),
       !v.preuve_verifiee && h("p", { class: "note" }, "Les références des réanalyses sont en cours de vérification par un humain.")),
     panel("kit", "Ce que ça apporte", `${v.G.length} gains`, "", h("ul", {}, gains, v.G.length > 3 && h("li", {}, h("a", { href: "#/dossier" }, `et ${v.G.length - 3} autres dans le dossier`)))),
   );
@@ -241,7 +238,7 @@ function blister(d) {
   ];
   const cols = 13, cell = 32, rows = Math.ceil(items.length / cols);
   const svg = s("svg", { class: "blister", viewBox: `0 0 ${cols * cell} ${rows * cell}`, role: "group", "aria-label": `${items.length} essais : ${kept.length} retenus, ${items.length - kept.length} écartés` });
-  const tints = (g) => (g.startsWith("r") ? REJECT[g.slice(1)][1] : "#f4f6fa");
+  const tints = (g) => (g.startsWith("r") ? REJECT[g.slice(1)][1] : "#FFFFFF");
   items.forEach(({ t, g }, i) => {
     const cx = (i % cols) * cell + cell / 2, cy = Math.floor(i / cols) * cell + cell / 2;
     const node = s("g", { class: "dimple", tabindex: "0", role: "button", "data-g": g, "aria-label": `${t.nct_id} : ${t.retenu ? "retenu, preuve " + t.E : "écarté, " + t.raison}` });
@@ -289,7 +286,7 @@ function funnelBars(d, withDrops) {
     const [code, ...rest] = st.etape.split(" : ");
     const prev = i ? d.entonnoir[i - 1].n : null;
     const bar = h("i", { style: `width:${(100 * st.n) / top}%` });
-    return h("div", { class: "frow" },
+    return h("div", { class: "frow" + (code.startsWith("S4") ? " final" : "") },
       h("div", { class: "lab" }, h("b", {}, code), rest.length ? ` : ${rest.join(" : ")}` : ""),
       h("div", { class: "bar" }, bar),
       h("div", { class: "val num" }, st.n_publie == null ? "<5" : fmt(st.n_publie), withDrops && prev != null && st.n < prev ? h("small", {}, `−${prev - st.n}`) : ""),
@@ -370,7 +367,7 @@ function patientsView() {
     if (g.mediane_traite == null || g.mediane_controle == null) return h("div", { class: "panel-box group" }, h("h4", {}, `Marqueur ${g.statut}`), h("p", {}, "Effectif trop petit : masqué (moins de 5)."));
     const pair = (lab, val, color, n) => h("div", { class: "pair" }, h("span", {}, `${lab} (${fmt(n)})`), h("div", { class: "bar" }, h("i", { style: `width:${(100 * val) / maxM}%;background:${color}` })), h("span", { class: "val num" }, `${String(val).replace(".", ",")} mois`));
     return h("div", { class: "panel-box group" }, h("h4", {}, `Marqueur ${g.statut} : gain de ${String(g.gain_mois > 0 ? "+" + g.gain_mois : g.gain_mois).replace(".", ",")} mois`),
-      pair("Avec traitement", g.mediane_traite, "var(--cobalt)", g.n_traite), pair("Sans traitement", g.mediane_controle, "#9aa5b8", g.n_controle),
+      pair("Avec traitement", g.mediane_traite, "#1b7f58", g.n_traite), pair("Sans traitement", g.mediane_controle, "#BDBDBD", g.n_controle),
       h("p", { class: "t-sub", style: "font-family:inherit;margin-top:8px" }, "Survie médiane."));
   }));
   const st = d.statistique, c = d.essai_confirmation;
@@ -511,6 +508,7 @@ async function comparisonView() {
 function setAlert(text) { const a = $("#alert"); a.textContent = text || ""; a.hidden = !text; }
 
 function setBusy(on) {
+  $("#progress").hidden = !on;
   document.querySelectorAll(".ask button[type=submit]").forEach((b) => { b.disabled = on; b.textContent = on ? "Analyse…" : "Analyser"; });
   document.querySelectorAll(".finder-go").forEach((b) => { b.disabled = on; });
 }
@@ -521,14 +519,13 @@ async function run(text) {
   if (state.loading) return;
   state.loading = true; setAlert("");
   setBusy(true);
-  const opening = route() === "accueil" && capsule ? capsule.open() : Promise.resolve();
   try {
-    const [res] = await Promise.all([api("/api/analyze", { question: text }), opening]);
+    const res = await api("/api/analyze", { question: text });
     Object.assign(state, { dossier: res.dossier, markdown: res.markdown, question: text, example: res.exemple });
     $("#qCompact").value = text;
     if (route() === "apercu") render(); else location.hash = "#/apercu";
   } catch (e) {
-    capsule?.close(); setAlert(e.message);
+    setAlert(e.message);
   } finally {
     state.loading = false;
     setBusy(false);
@@ -548,7 +545,6 @@ async function render() {
   const r = route();
   document.body.dataset.state = r === "accueil" ? "landing" : "work";
   renderNav(r);
-  if (r !== "accueil") { capsule?.dispose(); capsule = null; }
   const main = $("#main");
   let view;
   if (r === "accueil") view = landing();

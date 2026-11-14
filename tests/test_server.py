@@ -30,8 +30,8 @@ def base():
 def test_home_and_assets_are_served_locally(base):
     page = requests.get(base + "/")
     assert page.status_code == 200 and "TrialRevive" in page.text
-    for path in ("/assets/css/app.css", "/assets/js/app.js", "/assets/js/capsule.js", "/assets/js/illustration.js", "/assets/vendor/three.min.js",
-                 "/assets/fonts/bricolage-grotesque-latin-wght-normal.woff2"):
+    for path in ("/assets/css/app.css", "/assets/js/app.js", "/assets/js/illustration.js", "/assets/fonts/Manrope-Variable.ttf",
+                 "/assets/brand/TrialRevive_logo_horizontal_noir.svg", "/assets/brand/TrialRevive_icone_carree.png"):
         assert requests.get(base + path).status_code == 200, path
     assert "http" not in " ".join(
         line for line in page.text.splitlines() if "src=" in line or "href=" in line and "stylesheet" in line

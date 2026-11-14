@@ -70,3 +70,7 @@ Veille automatique de littérature et notifications push, horloge commune des da
 - ✅ Accueil du site redessiné d'après la maquette fournie (image.png) : titre centré, illustration vectorielle de chercheurs et d'icônes médicales, capsule 3D flottante, barre de recherche avec liste de suggestions (combobox clavier). Palette verte/noire/gris clair sur tout le site. Fichiers : web/js/illustration.js, web/js/app.js, web/css/app.css.
 
 - ✅ Toutes les pages du site refaites dans le style de la maquette : bandeaux gris arrondis avec illustrations (web/js/illustration.js), panneaux blancs, états vides illustrés, nouvelle page « Comment ça marche ». Lanceur : lancer.bat (ou python server.py, puis http://localhost:8000).
+
+- ✅ Front mis en conformité avec la charte graphique (docs/charte/) : gris uniquement, Manrope, coins droits, logo officiel, sans ombre ni dégradé ni 3D (capsule retirée). Garde-fous : tests/test_charte.py. Les interfaces Streamlit de secours (app_ui.py, app.py) gardent l'ancien style.
+
+- 🎨 Couleur remise sur le front (vert médical, menthe, ambre pour les alertes) à la demande de l'équipe : le tout gris faisait trop sombre pour un produit de santé. Écart assumé à la charte graphique, documenté dans docs/GUIDE_FRONT.md et listé dans tests/test_charte.py. Manrope, logo officiel et coins droits conservés.

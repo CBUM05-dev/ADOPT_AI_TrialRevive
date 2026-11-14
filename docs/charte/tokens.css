@@ -1,0 +1,35 @@
+/* TrialRevive : variables de la charte graphique (CSS).
+   Polices : charger Manrope (Google Fonts) ou les fichiers de ../polices/. */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;500;700;800&display=swap');
+
+:root {
+  /* Couleurs : nuances de gris uniquement */
+  --tr-noir: #0A0A0A;        /* titres, logo, aplats forts, en-têtes de tableaux */
+  --tr-anthracite: #262626;  /* texte courant */
+  --tr-graphite: #4A4A4A;    /* sous-titres, texte secondaire */
+  --tr-gris-moyen: #6E6E6E;  /* légendes, numéros de page (le gris le plus clair autorisé pour du texte sur blanc) */
+  --tr-gris-clair: #BDBDBD;  /* icônes discrètes, flèches, texte sur fond noir */
+  --tr-perle: #E4E4E4;       /* bordures, filets, cartes */
+  --tr-brume: #F5F5F5;       /* fonds d'encadrés et de cartes */
+  --tr-blanc: #FFFFFF;       /* fond par défaut */
+  --tr-filet: #D9D9D9;       /* filets fins (sous les titres, en-tête, pied de page) */
+
+  /* Typographie */
+  --tr-police: 'Manrope', Arial, sans-serif;
+  --tr-graisse-fine: 200;    /* « Trial » du logo, accroches, grands chiffres */
+  --tr-graisse-texte: 400;
+  --tr-graisse-moyenne: 500; /* surtitres en capitales */
+  --tr-graisse-forte: 800;   /* titres, « Revive » du logo */
+  --tr-approche-titre: -0.04em;
+  --tr-approche-surtitre: 0.16em;
+
+  /* Formes */
+  --tr-rayon: 0;             /* coins droits ; seule l'icône d'application est arrondie */
+  --tr-filet-fin: 1px;
+  --tr-filet-accent: 2px;
+}
+
+body { font-family: var(--tr-police); color: var(--tr-anthracite); background: var(--tr-blanc); }
+h1, h2, h3 { color: var(--tr-noir); font-weight: var(--tr-graisse-forte); letter-spacing: var(--tr-approche-titre); }
+.tr-surtitre { font-size: 0.8125rem; font-weight: var(--tr-graisse-moyenne); letter-spacing: var(--tr-approche-surtitre); text-transform: uppercase; color: var(--tr-gris-moyen); }
+.tr-encadre { background: var(--tr-brume); border-left: 4px solid var(--tr-noir); padding: 12px 16px; }

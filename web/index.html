@@ -5,21 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>TrialRevive</title>
 <meta name="description" content="Une question scientifique entre, un dossier de faisabilité sort : quels essais cliniques peuvent répondre, avec quelle preuve.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231B7F58'/%3E%3Crect x='6' y='12' width='20' height='8' rx='4' transform='rotate(-45 16 16)' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="icon" type="image/png" href="/assets/brand/TrialRevive_icone_carree.png">
 <link rel="stylesheet" href="/assets/css/app.css">
 </head>
 <body data-state="landing">
+<div class="progress" id="progress" hidden role="progressbar" aria-label="Analyse en cours"></div>
 <a class="skip" href="#main">Aller au contenu</a>
 
 <div class="app">
   <nav class="rail" aria-label="Navigation principale">
-    <a class="brand" href="#/" aria-label="TrialRevive, accueil">
-      <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#1B7F58"/><g transform="rotate(-45 16 16)"><rect x="5.5" y="11.5" width="21" height="9" rx="4.5" fill="#fff"/><path d="M16 11.5h6.5a4.5 4.5 0 0 1 0 9H16z" fill="#B8ECD2"/></g></svg>
-      <span>TrialRevive</span>
-    </a>
+    <a class="brand" href="#/" aria-label="TrialRevive, accueil"><img src="/assets/brand/TrialRevive_logo_horizontal_noir.svg" alt="TrialRevive" width="172" height="28"></a>
     <ul class="nav" id="nav"></ul>
     <div class="rail-foot">
-      <p><span class="dot dot-amber" aria-hidden="true"></span>Patients de l'essai interne : fictifs</p>
+      <p><span class="dot" aria-hidden="true"></span>Patients de l'essai interne : fictifs</p>
       <p>Essais publics : ClinicalTrials.gov</p>
     </div>
   </nav>
@@ -32,7 +30,7 @@
         <button class="btn btn-primary" type="submit">Analyser</button>
         <button class="btn btn-ghost" type="button" data-demo>Cas de démo</button>
       </form>
-      <p class="badge badge-amber" title="Aucune donnée de santé réelle n'est utilisée"><span class="dot dot-amber" aria-hidden="true"></span>Patients fictifs</p>
+      <p class="badge badge-amber" title="Aucune donnée de santé réelle n'est utilisée"><span class="dot" aria-hidden="true"></span>Patients fictifs</p>
     </header>
     <p class="alert" id="alert" role="alert" hidden></p>
     <main id="main" tabindex="-1"></main>
@@ -50,7 +48,6 @@
 </aside>
 <div class="tip" id="tip" role="tooltip" hidden></div>
 
-<script src="/assets/vendor/three.min.js"></script>
 <script type="module" src="/assets/js/app.js"></script>
 </body>
 </html>

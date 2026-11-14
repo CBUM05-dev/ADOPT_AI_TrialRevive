@@ -1,4 +1,4 @@
-// Bibliothèque d'illustrations : personnages et icônes de laboratoire en dessin vectoriel plat (trait noir, aplats verts).
+// Bibliothèque d'illustrations : personnages et icônes de laboratoire en dessin au trait noir, aplats verts.
 // L'illustration d'accueil et les petites illustrations de chaque page sont composées avec les mêmes pièces.
 const INK = "#1a1a1a", GREEN = "#6fcf9f", MINT = "#b8ecd2", SW = 2.5;
 
@@ -22,8 +22,8 @@ const KIT = `
   <path d="M17 24v-9a5 5 0 0 1 5-5h18a5 5 0 0 1 5 5v9"/><rect x="0" y="24" width="62" height="46" rx="9" fill="#fff"/>
   <path d="M31 34v26M18 47h26" stroke-width="10"/><path d="M31 34v26M18 47h26" stroke="${GREEN}" stroke-width="5.5"/>`;
 const CLIPBOARD = `
-  <rect x="6" y="14" width="64" height="82" rx="7" fill="#fff"/><rect x="26" y="6" width="24" height="14" rx="4" fill="#d4d4d4"/>
-  <path d="M18 42h40M18 56h40M18 70h22" stroke="#bdbdbd"/><path d="M44 80l7 7 13-15" stroke="${INK}" stroke-width="9"/><path d="M44 80l7 7 13-15" stroke="${GREEN}" stroke-width="4.5"/>`;
+  <rect x="6" y="14" width="64" height="82" rx="7" fill="#fff"/><rect x="26" y="6" width="24" height="14" rx="4" fill="#D9D9D9"/>
+  <path d="M18 42h40M18 56h40M18 70h22" stroke="#BDBDBD"/><path d="M44 80l7 7 13-15" stroke="${INK}" stroke-width="9"/><path d="M44 80l7 7 13-15" stroke="${GREEN}" stroke-width="4.5"/>`;
 const MAGNIFIER = `
   <circle cx="34" cy="34" r="22" fill="#fff"/><path d="M50 50l24 24" stroke-width="7"/>
   <path d="M25 25l18 18M43 25L25 43" stroke="${INK}" stroke-width="9"/><path d="M25 25l18 18M43 25L25 43" stroke="${GREEN}" stroke-width="4.5"/>`;
@@ -34,10 +34,10 @@ const DOCTOR = `
   <path d="M262 340l8-124q4-30 42-38h50q38 8 42 38l8 124z" fill="#fff"/>
   <path d="M310 190h60l-6 150h-48z" fill="${GREEN}"/>
   <path d="M318 186q-6 60 32 74 38-14 32-74" fill="none" stroke-width="3"/>
-  <circle cx="350" cy="262" r="7" fill="#d9d9d9"/>
+  <circle cx="350" cy="262" r="7" fill="#D9D9D9"/>
   <rect x="338" y="158" width="24" height="34" fill="#f1c7a3"/>
   <ellipse cx="350" cy="130" rx="31" ry="37" fill="#f1c7a3"/>
-  <path d="M319 124q-3-38 33-38 34 0 29 38-7-20-29-20-22 0-33 20z" fill="#2b2b2b"/>
+  <path d="M319 124q-3-38 33-38 34 0 29 38-7-20-29-20-22 0-33 20z" fill="#262626"/>
   <circle cx="338" cy="132" r="9"/><circle cx="362" cy="132" r="9"/><path d="M347 132h6"/>
   <circle cx="338" cy="132" r="2" fill="${INK}" stroke="none"/><circle cx="362" cy="132" r="2" fill="${INK}" stroke="none"/>
   <path d="M340 152q10 8 20 0"/>`;
@@ -50,7 +50,7 @@ const MAN = `
   <rect x="231" y="176" width="24" height="28" fill="#8c5a3c"/>
   <ellipse cx="243" cy="152" rx="30" ry="36" fill="#8c5a3c"/>
   <ellipse cx="212" cy="156" rx="5" ry="8" fill="#8c5a3c"/><ellipse cx="274" cy="156" rx="5" ry="8" fill="#8c5a3c"/>
-  <path d="M213 146q-1-35 31-35 31 0 30 35-7-18-30-18-23 0-31 18z" fill="#1d1d1d"/>
+  <path d="M213 146q-1-35 31-35 31 0 30 35-7-18-30-18-23 0-31 18z" fill="#0A0A0A"/>
   <circle cx="233" cy="154" r="2.4" fill="${INK}" stroke="none"/><circle cx="255" cy="154" r="2.4" fill="${INK}" stroke="none"/>
   <path d="M233 171q10 8 20 0"/>`;
 const NURSE = `
@@ -58,11 +58,11 @@ const NURSE = `
   <path d="M462 210l13 22 13-22z" fill="#e3ab83"/>
   <rect x="463" y="186" width="24" height="26" fill="#e3ab83"/>
   <ellipse cx="475" cy="162" rx="29" ry="34" fill="#e3ab83"/>
-  <path d="M445 158q-2-36 31-36 34 0 30 36-8-18-30-18-22 0-31 18z" fill="#2b2b2b"/><circle cx="476" cy="110" r="14" fill="#2b2b2b"/>
+  <path d="M445 158q-2-36 31-36 34 0 30 36-8-18-30-18-22 0-31 18z" fill="#262626"/><circle cx="476" cy="110" r="14" fill="#262626"/>
   <path d="M447 166q28-9 56 0l-4 26q-24 10-48 0z" fill="${MINT}"/><path d="M447 168l-9-7M503 168l9-7"/>
   <circle cx="464" cy="152" r="2.4" fill="${INK}" stroke="none"/><circle cx="486" cy="152" r="2.4" fill="${INK}" stroke="none"/>
-  <rect x="442" y="260" width="64" height="80" rx="6" fill="#fff"/><rect x="462" y="254" width="26" height="13" rx="3" fill="#d4d4d4"/>
-  <path d="M452 286h44M452 299h44M452 312h30" stroke="#bdbdbd"/>
+  <rect x="442" y="260" width="64" height="80" rx="6" fill="#fff"/><rect x="462" y="254" width="26" height="13" rx="3" fill="#D9D9D9"/>
+  <path d="M452 286h44M452 299h44M452 312h30" stroke="#BDBDBD"/>
   <circle cx="446" cy="304" r="9" fill="#e3ab83"/><circle cx="502" cy="304" r="9" fill="#e3ab83"/>`;
 
 const NS = 'xmlns="http://www.w3.org/2000/svg" fill="none" stroke-linecap="round" stroke-linejoin="round"';
