@@ -9,3 +9,11 @@ outputs/
 # Documents confidentiels de l'équipe (accord + conception) : ne jamais publier
 *.docx
 *.pdf
+
+# Skills installés localement (lien absolu propre à cette machine)
+.agents/
+.claude/skills/
+skills-lock.json
+
+# Maquette de référence (non publiée)
+image.png

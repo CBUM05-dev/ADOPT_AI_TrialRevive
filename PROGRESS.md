@@ -64,3 +64,9 @@ Veille automatique de littérature et notifications push, horloge commune des da
 - Préparé le dossier de revue des six articles, les liens DOI et les limites de la validation.
 - Corrigé les résultats trompeurs sur les marqueurs non disponibles et sur un traitement absent de l'essai interne.
 - Préparé les cinq diapositives, le pitch à jour et l'export de secours ; contrôles automatiques ci-dessus. Restes humains conservés ouverts.
+
+- ✅ Nouveau site web (remplace l'interface Streamlit pour la démo) : server.py + web/ (HTML/CSS/JS, polices et 3D en local). Lancer : python server.py puis http://localhost:8000. Capsule 3D qui s'ouvre, blister de 104 essais, tiroir de détail, comparaison IA avec import. Les interfaces Streamlit (app_ui.py, app.py) restent en secours. Skill frontend-design installé (npx skills add anthropics/skills@frontend-design).
+
+- ✅ Accueil du site redessiné d'après la maquette fournie (image.png) : titre centré, illustration vectorielle de chercheurs et d'icônes médicales, capsule 3D flottante, barre de recherche avec liste de suggestions (combobox clavier). Palette verte/noire/gris clair sur tout le site. Fichiers : web/js/illustration.js, web/js/app.js, web/css/app.css.
+
+- ✅ Toutes les pages du site refaites dans le style de la maquette : bandeaux gris arrondis avec illustrations (web/js/illustration.js), panneaux blancs, états vides illustrés, nouvelle page « Comment ça marche ». Lanceur : lancer.bat (ou python server.py, puis http://localhost:8000).

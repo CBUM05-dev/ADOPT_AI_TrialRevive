@@ -1,4 +1,4 @@
-# TrialRevive
+﻿# TrialRevive
 
 Prototype de faisabilité sur des essais publics ClinicalTrials.gov et 400 patients **entièrement fictifs**. Cas de démonstration : panitumumab / KRAS dans le cancer colorectal. Les références et règles cliniques restent à valider par la personne Science ; la démo n'est pas un outil de décision clinique.
 
@@ -18,6 +18,16 @@ python -m streamlit run app_ui.py --browser.gatherUsageStats=false
 
 Sur Windows, activer avec `.venv\Scripts\Activate.ps1` dans PowerShell. L'installation nécessite le registre de paquets ; ensuite, la démo utilise les fichiers en cache, sans clé API ni accès Internet. `app.py` reste l'interface simple de secours. Éviter `src.fetch` sans `--offline` si l'on veut conserver les données brutes du dépôt.
 
+
+## Site web (interface principale)
+
+```bash
+python server.py
+# puis ouvrir http://localhost:8000
+```
+
+Site autonome (polices, 3D et scripts en local, aucun accès Internet nécessaire). Il réutilise la logique de `src/` sans la modifier. Les interfaces Streamlit (`app_ui.py`, `app.py`) restent disponibles en secours.
+
 ## Livrables et derniers préparatifs
 
 ```bash
@@ -31,3 +41,4 @@ Cette commande produit les chiffres, le dossier Markdown et une page HTML autono
 - [Avancement et restes précis](PROGRESS.md), [vérifications](VERIFICATION.md).
 
 Ne fournir à des services externes que des données publiques ou fictives ; ne pas publier les documents confidentiels de l'équipe. Les réponses IA réellement collectées ne sont pas encore présentes et aucune supériorité comparative n'est mesurée.
+
